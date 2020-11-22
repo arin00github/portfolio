@@ -1,0 +1,41 @@
+#wrap.pc #header{
+    z-index: 100;
+    position: fixed;
+    width: 100%; top: 0; left: 0; right: 0;
+    padding: 20px 3% 10px 4.948%;
+    position: relative;
+    
+  }
+
+#header .header-wrap .header-inner{
+  height: 50px;
+  display: flex;
+}
+
+#header .header-wrap .header-inner nav{
+  margin-left: auto;
+  width: 57%;
+}
+
+#header .header-wrap .header-inner .gnb{
+  display: flex;
+}
+
+#header.open .header-wrap .header-inner .subnav-bg{
+  height: 140px;
+}
+
+#header .header-wrap .header-inner .gnb > li{
+  margin: 0 18px;
+  flex: 1;
+  position: relative;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.4s;
+  transform: scale(1.0);
+}
+
+#header .header-wrap .header-inner .gnb > li.active{
+  transform: scale(1.2);
+  font-weight: 500;
+}

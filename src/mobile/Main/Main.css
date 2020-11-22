@@ -1,0 +1,102 @@
+#Sec0{
+    height: 100vh;
+}
+#Sec0 .sect-inner{
+width: 100%;
+height: 100%;
+}
+
+#Sec0 .sect-inner .main-slider{
+width: 100%;
+height: 100vh;
+}
+
+#Sec0 .sect-inner .main-slider .slick-list .slick-slide{
+height: 100vh;
+position: relative;
+}
+
+#Sec0 .sect-inner .main-slider .slick-list{
+height: 100vh;
+}
+
+
+.main-slider .main-item .main-text{
+position: absolute;
+left: 15%;
+top: 50%;
+transform: translateY(-50%);
+width: 70%;
+overflow: hidden;
+padding: 24px;
+border: 8px solid #000;
+
+}
+.main-slider .slick-slide .main-item .main-text .type{
+display: inline-block;
+overflow: hidden;
+border-right: 2px solid #000;
+}
+.main-slider .slick-slide .main-item .main-text .type span{
+display: inline-block;
+overflow: hidden;
+white-space: nowrap;
+color:black;
+text-transform: capitalize;
+font-size: 60px;
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+
+}
+
+
+.main-slider .slick-slide.slick-active .main-text .type.txt01{
+animation: mainType1 4s steps(30) 0.2s 1 normal both,
+blankText 0.4s steps(30) infinite normal;
+}
+.main-slider .slick-slide.slick-active .main-item .main-text .type.txt02{
+animation: mainType2 4s steps(30) 0.2s 1 normal both,
+blankText 0.4s steps(30) infinite normal;
+}
+
+.main-slider .slick-slide.slick-active .main-item .main-text .type.txt03{
+animation: mainType3 4s steps(30) 0.2s 1 normal both,
+blankText 0.4s steps(30) infinite normal;
+}
+.main-slider .slick-slide.slick-active .main-item .main-text .type.txt04{
+animation: mainType4 4s steps(30) 0.2s 1 normal both,
+blankText 0.4s steps(30) infinite normal;
+}
+
+
+@keyframes mainType1 {
+0%{width: 0;} 100%{width: 58%;}
+}
+
+@keyframes mainType2 {
+0%{width: 0;} 100%{width: 65%;}
+}
+
+@keyframes mainType3 {
+0%{width: 0;} 100%{width: 72%;}
+}
+@keyframes mainType4 {
+0%{width: 0;} 100%{width: 76%;}
+}
+
+@keyframes blankText {
+0%{border-right-color: rgba(0,0,0,0.6);}
+100%{border-right-color:transparent}
+}
+
+
+
+@media screen and (max-width:480px){
+    .main-slider .main-item .main-text{
+        left: 5%;
+        width: 90%;
+    }
+    .main-slider .slick-slide .main-item .main-text .type span{
+        font-size: 24px;
+    }
+}
