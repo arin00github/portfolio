@@ -18,7 +18,7 @@ function Web (){
 
     return(
         <div id="main">
-            <section id="Sec0" className="section-page web">
+            <section id="Sec0" className="web mobile">
                 <div className="sect-inner">
                 <h2 className="sect-title">Web Design</h2>
                 <div className="sect-content">

@@ -30,9 +30,9 @@ function Header(){
                     <nav><ul className="gnb">
                         <li className="list"><Link to="/About">About</Link>
                         </li>
-                        <li className="list"><Link to="/Portfolio/web">Web</Link></li>
-                        <li className="list"><Link to="/Portfolio/package">Package</Link></li>
-                        <li className="list"><Link to="/Portfolio/logo">Logo</Link></li>
+                        <li className="list"><Link to="/web">Web</Link></li>
+                        <li className="list"><Link to="/package">Package</Link></li>
+                        <li className="list"><Link to="/css">CSS</Link></li>
                         <li className="list"><Link to="/Contact">Contact</Link>
                         </li>
                     </ul></nav>

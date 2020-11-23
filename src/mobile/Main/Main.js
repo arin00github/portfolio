@@ -7,7 +7,7 @@ function Main(){
         dots:false,
         infinite:true,
         slidesToShow : 1,
-        slidesToScroll:1,
+        slidesToScroll:1, 
         arrows:false,
         autoplay:true,
         autoplaySpeed:4000,
@@ -18,7 +18,7 @@ function Main(){
 
     return(
         <div di="main">
-            <section id="Sec0" className="section-page">
+            <section id="Sec0" className="mobile main">
                     <div className="sect-inner">
                         <Mainslider {...settings} className="main-slider">
                             <div className="main-item">     

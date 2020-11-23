@@ -59,10 +59,10 @@ function Header (){
                         </li>
                         <li className="list"><Link to="/About">About</Link>
                         </li>
-                        <li className="list"><Link to="/Portfolio/web">Web & Mobile</Link></li>
-                        <li className="list"><Link to="/Portfolio/package">Package</Link></li>
-                        <li className="list"><Link to="/Portfolio/css">Css</Link></li>
-                        <li className="list"><Link></Link>
+                        <li className="list"><Link to="/web">Web & Mobile</Link></li>
+                        <li className="list"><Link to="/package">Package</Link></li>
+                        <li className="list"><Link to="/css">Css</Link></li>
+                        <li className="list"><Link to="/Contact">Contact</Link>
                         </li>
                     </ul>
                 </div>

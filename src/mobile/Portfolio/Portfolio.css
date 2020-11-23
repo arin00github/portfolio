@@ -8,24 +8,24 @@
 
 
 /***** package page*****/
-#Sec0.package .sect-inner{
+#Sec0.mobile.package .sect-inner{
     width: 90%;
     margin: 0 auto;
 }
 
-#Sec0.package .sect-inner .sect-title{
+#Sec0.mobile.package .sect-inner .sect-title{
     text-align: center;
     padding-bottom: 24px;
 }
 
 
-#Sec0.package .sect-content {
+#Sec0.mobile.package .sect-content {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-#Sec0.package .sect-content .card{
+#Sec0.mobile.package .sect-content .card{
     flex-basis: calc((100% - 24px)/2);
     margin-bottom: 24px;
     overflow: hidden;
@@ -34,15 +34,15 @@
     height: auto;
 }
 
-#Sec0.package .sect-content .card img{
+#Sec0.mobile.package .sect-content .card img{
     width: 100%;
     transform: scale(1.1);
 }
-#Sec0.package .sect-content .card:nth-child(2n){
+#Sec0.mobile.package .sect-content .card:nth-child(2n){
     margin-left: 24px;
 }
 
-#Sec0.package .sect-content .card .hoverbg{
+#Sec0.mobile.package .sect-content .card .hoverbg{
     width: 100%; height: 100%;
     position: absolute;
     top: 0; left: 0;
@@ -55,11 +55,11 @@
     opacity: 0;
     transition: 0.4s;
 }
-#Sec0.package .sect-content .card:hover .hoverbg{
+#Sec0.mobile.package .sect-content .card:hover .hoverbg{
     opacity: 1;
 }
 
-#Sec0.package #modal {
+#Sec0.mobile.package #modal {
     position: fixed;
     top: 0;
     width: 100%;
@@ -70,25 +70,25 @@
     justify-content: center;
     align-items: center;
 }
-#Sec0.package #modal .img-area{
+#Sec0.mobile.package #modal .img-area{
     width: 70%;
     height: 400px;
     
     overflow-y: scroll;
 }
 
-#Sec0.package #modal .img-area .img-box img{
+#Sec0.mobile.package #modal .img-area .img-box img{
     width: 100%;
     display: block;
 }
-#Sec0.package #modal #close-modal-btn{
+#Sec0.mobile.package #modal #close-modal-btn{
     position: absolute;
     right: 36px;
     top: 36px;
     width: 36px;
     height: 36px;
 }
-#Sec0.package #modal #close-modal-btn span{
+#Sec0.mobile.package #modal #close-modal-btn span{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -98,31 +98,31 @@
     background: #fff;
 }
 
-#Sec0.package #modal #close-modal-btn span:nth-child(1){
+#Sec0.mobile.package #modal #close-modal-btn span:nth-child(1){
     transform: rotate(45deg);
 }
 
-#Sec0.package #modal #close-modal-btn span:nth-child(2){
+#Sec0.mobile.package #modal #close-modal-btn span:nth-child(2){
     transform: rotate(-45deg);
 }
 
 
 /******** web page***********/
-#Sec0.web .sect-inner{
+#Sec0.mobile.web .sect-inner{
     width: 80%;
     margin: 0 auto;
 }
 
-#Sec0.web .sect-inner .sect-title{
+#Sec0.mobile.web .sect-inner .sect-title{
     text-align: center;
     padding-bottom: 24px;
 }
 
-#Sec0.web .sect-content .card{
+#Sec0.mobile.web .sect-content .card{
     margin-bottom: 30px;
     display: flex
 }
-#Sec0.web .sect-content .card .project-img{
+#Sec0.mobile.web .sect-content .card .project-img{
     width: 54%;
     border-radius: 8px;
     background: #ddd;
@@ -130,11 +130,11 @@
     overflow: hidden;
 }
 
-#Sec0.web .sect-content .card .project-img img{
+#Sec0.mobile.web .sect-content .card .project-img img{
     width: 100%; display: block;
 }
 
-#Sec0.web .sect-content .card .project-img .hoverbg{
+#Sec0.mobile.web .sect-content .card .project-img .hoverbg{
     width: 100%; height: 100%;
     position: absolute;
     top: 0; left: 0;
@@ -147,36 +147,60 @@
     opacity: 0;
     transition: 0.4s;
 }
-#Sec0.web .sect-content .card .project-img:hover .hoverbg{
+#Sec0.mobile.web .sect-content .card .project-img:hover .hoverbg{
     opacity: 1;
 }
 
-#Sec0.web .sect-content .card .project-desc{
+#Sec0.mobile.web .sect-content .card .project-desc{
     margin-left: 6%;
     width: 40%;
 }
 
+/******** web page***********/
+#Sec0.mobile.css .sect-inner{
+    width: 90%;
+    margin: 0 auto;
+}
+
+#Sec0.mobile.css .sect-inner .sect-title{
+    text-align: center;
+    padding-bottom: 24px;
+}
 
 
+#Sec0.mobile.css .sect-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#Sec0.mobile.css .sect-content .card{
+    flex-basis: calc((100% - 24px)/2);
+    margin-bottom: 24px;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+    height: auto;
+}
 
 
 @media screen and (max-width:800px){
-    #Sec0.web .sect-inner{width: 90%;}
-    #Sec0.web .sect-content .card .project-desc{
+    #Sec0.mobile.web .sect-inner{width: 90%;}
+    #Sec0.mobile.web .sect-content .card .project-desc{
         font-size: 14px;
     }
 }
 
 @media screen and (max-width:660px){
-    #Sec0.web .sect-content .card{
+    #Sec0.mobile.web .sect-content .card{
         display: block;
         width: 100%;
         margin-bottom: 40px;
     }
-    #Sec0.web .sect-content .card .project-img{
+    #Sec0.mobile.web .sect-content .card .project-img{
         width: 100%;
     }
-    #Sec0.web .sect-content .card .project-desc{
+    #Sec0.mobile.web .sect-content .card .project-desc{
         width: 100%;
         margin-left: 0;
         padding-top: 24px;
@@ -187,14 +211,14 @@
     
     
 
-    #Sec0.package .sect-content .card{
+    #Sec0.mobile.package .sect-content .card{
         flex-basis: 100%;
     }
-    #Sec0.package .sect-content .card:nth-child(2n){
+    #Sec0.mobile.package .sect-content .card:nth-child(2n){
         margin-left: 0;
     }
 
-    #Sec0.package #modal .img-area{
+    #Sec0.mobile.package #modal .img-area{
         width: 100%;
         height: 100vh;
     }

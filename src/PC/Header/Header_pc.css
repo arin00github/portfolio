@@ -4,6 +4,7 @@
     width: 100%; top: 0; left: 0; right: 0;
     padding: 20px 3% 10px 4.948%;
     position: relative;
+    border-bottom: 1px solid #C5C5C5;
     
   }
 
@@ -14,11 +15,12 @@
 
 #header .header-wrap .header-inner nav{
   margin-left: auto;
-  width: 57%;
+  width: 55%;
+  max-width: 680px;
 }
 
 #header .header-wrap .header-inner .gnb{
-  display: flex;
+  display: flex; height: 50px;
 }
 
 #header.open .header-wrap .header-inner .subnav-bg{
@@ -30,6 +32,7 @@
   flex: 1;
   position: relative;
   text-align: center;
+  line-height: 50px;
   font-size: 16px;
   transition: 0.4s;
   transform: scale(1.0);

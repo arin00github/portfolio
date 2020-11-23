@@ -61,11 +61,17 @@ function Main (){
 
 
     return(
+        <>
+        
         <div id="main" className="home">
             <Vertical {...settings} ref={slider}>
                 <section id="Sec0" className="section-page">
                     <div className="sect-inner">
                         <HomeSlider></HomeSlider>
+                        <div className="name-intro">
+                            <p>Lee hyojeong</p>
+                            <p>portfolio</p>
+                        </div>
                     </div>
                 </section>
                 <section id="Sec1" className="section-page">
@@ -142,6 +148,7 @@ function Main (){
                 
                 
         </div>
+        </>
     )
 }
 
