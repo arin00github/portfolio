@@ -1,4 +1,4 @@
-import './About.css';
+import './About_pc.css';
 import { useEffect } from 'react';
 
 function About (){

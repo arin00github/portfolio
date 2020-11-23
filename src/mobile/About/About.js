@@ -22,6 +22,9 @@ function About (){
             })
             
         })
+
+        // const test = document.getElementById('test');
+        // test.innerText = `width : ${window.innerWidth}, Height : ${window.innerHeight}`
         
     },[])
 
@@ -47,8 +50,8 @@ function About (){
 
 
     return(
-        <div id="main">
-            <section id="Sec1" className="section-page">
+        <div id="main" className="about">
+            <section id="Sec1" className="section-page ">
                 <div className="sect-inner">
                     <h2 className="sect-title">About Me</h2>
                     <p className="text01">안녕하세요. 새로운 프론트앤드 맴버가 되고 싶은 <span>이효정</span> 입니다.</p>

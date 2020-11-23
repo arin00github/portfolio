@@ -55,17 +55,13 @@ function Header (){
                         <span></span>
                     </button>
                     <ul className="gnb">
-                        <li className="list"><Link to="/m">Home</Link>
+                        <li className="list"><Link to="/">Home</Link>
                         </li>
-                        <li className="list"><Link to="/m/About">About</Link>
+                        <li className="list"><Link to="/About">About</Link>
                         </li>
-                        <li className="list"><Link to="/m/Portfolio">Porfolio</Link>
-                            <ul className="sub-gnb">
-                                <li className="list"><Link to="/m/Portfolio/web">Web & Mobile</Link></li>
-                                <li className="list"><Link to="/m/Portfolio/package">Package</Link></li>
-                                <li className="list"><Link to="/m/Portfolio/css">Css</Link></li>
-                            </ul>
-                        </li>
+                        <li className="list"><Link to="/Portfolio/web">Web & Mobile</Link></li>
+                        <li className="list"><Link to="/Portfolio/package">Package</Link></li>
+                        <li className="list"><Link to="/Portfolio/css">Css</Link></li>
                         <li className="list"><Link></Link>
                         </li>
                     </ul>

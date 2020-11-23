@@ -1,4 +1,4 @@
-import './Portfolio.css';
+import './Portfolio_pc.css';
 
 
 function Logo(){

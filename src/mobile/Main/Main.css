@@ -70,18 +70,18 @@ blankText 0.4s steps(30) infinite normal;
 
 
 @keyframes mainType1 {
-0%{width: 0;} 100%{width: 58%;}
+0%{width: 0;} 100%{width: 90%;}
 }
 
 @keyframes mainType2 {
-0%{width: 0;} 100%{width: 65%;}
+0%{width: 0;} 100%{width: 90%;}
 }
 
 @keyframes mainType3 {
-0%{width: 0;} 100%{width: 72%;}
+0%{width: 0;} 100%{width: 90%;}
 }
 @keyframes mainType4 {
-0%{width: 0;} 100%{width: 76%;}
+0%{width: 0;} 100%{width: 90%;}
 }
 
 @keyframes blankText {
@@ -89,14 +89,26 @@ blankText 0.4s steps(30) infinite normal;
 100%{border-right-color:transparent}
 }
 
+@media screen and (max-width:800px){
+    .main-slider .slick-slide .main-item .main-text .type span{
+        font-size: 46px;
+    }
+}
+
+
+@media screen and (max-width:660px){
+    .main-slider .slick-slide .main-item .main-text .type span{
+        font-size: 36px;
+    }
+}
 
 
 @media screen and (max-width:480px){
     .main-slider .main-item .main-text{
-        left: 5%;
-        width: 90%;
+        left: 10%;
+        width: 80%;
     }
     .main-slider .slick-slide .main-item .main-text .type span{
-        font-size: 24px;
+        font-size: 30px;
     }
 }

@@ -8,6 +8,17 @@
 
 
 /***** package page*****/
+#Sec0.package .sect-inner{
+    width: 90%;
+    margin: 0 auto;
+}
+
+#Sec0.package .sect-inner .sect-title{
+    text-align: center;
+    padding-bottom: 24px;
+}
+
+
 #Sec0.package .sect-content {
     display: flex;
     flex-direction: row;
@@ -25,6 +36,7 @@
 
 #Sec0.package .sect-content .card img{
     width: 100%;
+    transform: scale(1.1);
 }
 #Sec0.package .sect-content .card:nth-child(2n){
     margin-left: 24px;
@@ -49,6 +61,16 @@
 
 
 /******** web page***********/
+#Sec0.web .sect-inner{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#Sec0.web .sect-inner .sect-title{
+    text-align: center;
+    padding-bottom: 24px;
+}
+
 #Sec0.web .sect-content .card{
     margin-bottom: 30px;
     display: flex
@@ -92,26 +114,31 @@
 
 
 @media screen and (max-width:800px){
-    #Sec0 .sect-inner{width: 90%;}
+    #Sec0.web .sect-inner{width: 90%;}
     #Sec0.web .sect-content .card .project-desc{
         font-size: 14px;
     }
-} 
+}
 
-@media screen and (max-width:480px){
+@media screen and (max-width:660px){
     #Sec0.web .sect-content .card{
         display: block;
         width: 100%;
         margin-bottom: 40px;
     }
     #Sec0.web .sect-content .card .project-img{
-          width: 100%;
+        width: 100%;
     }
     #Sec0.web .sect-content .card .project-desc{
         width: 100%;
         margin-left: 0;
         padding-top: 24px;
     }
+}
+
+@media screen and (max-width:480px){
+    
+    
 
     #Sec0.package .sect-content .card{
         flex-basis: 100%;

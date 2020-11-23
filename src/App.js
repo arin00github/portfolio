@@ -42,10 +42,10 @@ function App() {
       <BrowserView>
         <PC/>
       </BrowserView>
-      <MobileView>
+      {/* <MobileView>
         <Mobile/>
-      </MobileView>
-      
+      </MobileView> */}
+     
       
     </div>
   );
