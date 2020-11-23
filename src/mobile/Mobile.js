@@ -8,6 +8,9 @@ import Package from './Portfolio/Package';
 import CssEffect from './Portfolio/Css';
 import Contact from './Contact/Contact';
 function MobileIndex (){
+
+    console.log(window.innerWidth)
+
     return(
         
         <div id="wrap" className="mobile">

@@ -59,6 +59,53 @@
     opacity: 1;
 }
 
+#Sec0.package #modal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Sec0.package #modal .img-area{
+    width: 70%;
+    height: 400px;
+    
+    overflow-y: scroll;
+}
+
+#Sec0.package #modal .img-area .img-box img{
+    width: 100%;
+    display: block;
+}
+#Sec0.package #modal #close-modal-btn{
+    position: absolute;
+    right: 36px;
+    top: 36px;
+    width: 36px;
+    height: 36px;
+}
+#Sec0.package #modal #close-modal-btn span{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: #fff;
+}
+
+#Sec0.package #modal #close-modal-btn span:nth-child(1){
+    transform: rotate(45deg);
+}
+
+#Sec0.package #modal #close-modal-btn span:nth-child(2){
+    transform: rotate(-45deg);
+}
+
 
 /******** web page***********/
 #Sec0.web .sect-inner{
@@ -145,5 +192,10 @@
     }
     #Sec0.package .sect-content .card:nth-child(2n){
         margin-left: 0;
+    }
+
+    #Sec0.package #modal .img-area{
+        width: 100%;
+        height: 100vh;
     }
 }

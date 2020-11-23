@@ -10,6 +10,10 @@ import './PC_index.css';
 
 
 function MobileIndex (){
+    
+
+    console.log(window.innerWidth)
+
     return(
         
         <div id="wrap" className="pc">

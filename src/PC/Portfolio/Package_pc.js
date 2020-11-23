@@ -1,23 +1,12 @@
 import { useState } from 'react';
 import './Portfolio_pc.css';
-import modalSlider from 'react-slick';
 
 
 
 function Package(){
 
 
-    const settings={
-        dots:false,
-        arrows:true,
-        infinite:false,
-        slidesToShow : 1,
-        slidesToScroll:1,
-        autoplay : true,
-        speed : 1000,
-        fade:true,
-        className : 'modal-slider',
-    }
+    
 
     const [visible, setVisible] = useState(false);
     const [index, setIndex] = useState('')
