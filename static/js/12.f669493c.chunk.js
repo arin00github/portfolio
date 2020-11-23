@@ -1,0 +1,2 @@
+(this.webpackJsonpmyportfolio=this.webpackJsonpmyportfolio||[]).push([[12],{37:function(c,e,s){},67:function(c,e,s){"use strict";s.r(e);var t=s(0);s(37);e.default=function(){return Object(t.jsx)("div",{id:"main",children:Object(t.jsx)("section",{id:"Sec0",className:"css mobile",children:Object(t.jsxs)("div",{className:"sect-inner",children:[Object(t.jsx)("h2",{className:"sect-title",children:"CSS Effect"}),Object(t.jsx)("div",{className:"sect-content",children:Object(t.jsx)("div",{className:"card"})})]})})})}}}]);
+//# sourceMappingURL=12.f669493c.chunk.js.map
