@@ -6,14 +6,14 @@
 }
    
 
-#Sec1 .sect-inner {
+#Sec1_about .sect-inner {
   width: 80%;
   position: relative;
   margin: 0 auto;
 }
 
 
-#Sec1 .sect-inner .sect-title{
+#Sec1_about .sect-inner .sect-title{
   text-align: center;
   font-size: 40px;
   font-weight: bold;
@@ -21,25 +21,25 @@
   margin-bottom: 40px;
 }
 
-#Sec1 .sect-inner .sect-content {
+#Sec1_about .sect-inner .sect-content {
   display: flex;
 }
 
-#Sec1 .sect-inner .cont-left {
+#Sec1_about .sect-inner .cont-left {
   width: 55%;
 }
-#Sec1 .sect-inner .text01{
+#Sec1_about .sect-inner .text01{
   padding: 18px 0;
   padding-bottom: 24px;
   text-align: center;
 }
-#Sec1 .sect-inner .text01 span{
+#Sec1_about .sect-inner .text01 span{ 
   color: black;
   font-weight: bold;
   font-size: 24px;
 }
 
-.cont-left .desc{
+#Sec1_about .cont-left .desc{
   max-width: 480px;
   width: 100%;
   margin-left: auto;
@@ -48,13 +48,13 @@
   font-size: 15px;
 }
   
-#Sec1 .sect-inner .cont-right {
+#Sec1_about .sect-inner .cont-right {
   width: 40%;
   margin-left: 5%;
   height: 330px;
   position: relative;
 }
-#Sec1 .sect-inner .cont-right .myImage{
+#Sec1_about .sect-inner .cont-right .myImage{
   position: absolute;
   top: 0;
   left: 0;
@@ -64,7 +64,7 @@
   background: #ddd;
 }
 /********  #Section2  **********/
-#Sec2 .sect-inner {
+#Sec2_about .sect-inner {
   width: 80%;
   position: relative;
   margin: 0 auto;
@@ -72,25 +72,25 @@
   padding: 40px 0;
 }
 
-#Sec2 .sect-inner .sect-title{
+#Sec2_about .sect-inner .sect-title{
   text-align: right;
   font-size: 40px;
   font-weight: bold;
   flex-basis: 40%;
 }
 
-#Sec2 .sect-inner .my-list{
+#Sec2_about .sect-inner .my-list{
   margin-left: 30px;
   flex-basis: calc(60% - 30px);
 }
 
-#Sec2 .sect-inner .my-list ul li{
+#Sec2_about .sect-inner .my-list ul li{
   padding: 12px 0;
 }
-#Sec2 .sect-inner .my-list ul li  span{
+#Sec2_about .sect-inner .my-list ul li  span{
   display: block;
 }
-#Sec2 .sect-inner .my-list ul li  span:nth-child(1){
+#Sec2_about .sect-inner .my-list ul li  span:nth-child(1){
   padding-bottom: 6px;
 }
 
@@ -99,7 +99,7 @@
 /********  #Section3   **********/
 
 
-#Sec3 .sect-inner {
+#Sec3_about .sect-inner {
     width: 70%;
     position: relative;
     margin: 0 auto;
@@ -107,37 +107,37 @@
 }
   
   
-#Sec3 .sect-inner .sect-title{
+#Sec3_about .sect-inner .sect-title{
     text-align: center;
     font-size: 40px;
     font-weight: bold;
     padding-top: 20px;
 }
   
-#Sec3 .sect-inner .sect-content {
+#Sec3_about .sect-inner .sect-content {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.sect-content .card{
+#Sec3_about .sect-content .card{
   position: relative;
   display: flex;
   justify-content: center; align-items: center;
   flex-basis: 25%; height: 200px; text-align: center;
 }
-.sect-content .card .percent{
+#Sec3_about .sect-content .card .percent{
   position: relative;
   width: 150px; height: 150px;
   border-radius: 50%;
   z-index: 10;
 }
 
-.percent svg{
+#Sec3_about .percent svg{
   position: relative; width: 150px; 
   height: 150px; z-index: 100;
 }
 
-.percent svg circle{
+#Sec3_about .percent svg circle{
   width: 100%; height: 100%; fill: none;
   stroke: #ececec;
   stroke-width: 10;
@@ -165,7 +165,7 @@
   stroke-dashoffset: calc(440 - (440*90) / 100);
 }
 
-.percent .data{
+#Sec3_about .percent .data{
   position: absolute;
   top: 0; left: 0;
   height: 100%; width: 100%;
@@ -183,7 +183,7 @@
   font-size: 16px; color: #777;
 }
 
-.stickbar-wrap{
+#Sec3_about .stickbar-wrap{
   display: flex;
   width: 100%;
   padding: 40px 0;
@@ -230,7 +230,7 @@
   height: 10px;
   
 }
-.bar01{
+#Sec3_about .bar01{
   width: 90%;
 }
 
@@ -244,26 +244,26 @@
 
 
 /********  section04  **********/
-#Sec4 .sect-inner {
+#Sec4_about .sect-inner {
   width: 68%;
   position: relative;
   margin: 0 auto;
   padding: 40px 0;
 }
 
-#Sec4 .sect-inner .sect-content{
+#Sec4_about .sect-inner .sect-content{
   display: flex;
 }
-#Sec4 .sect-inner .cont-left{
+#Sec4_about .sect-inner .cont-left{
   flex-basis: 45%;
 }
-#Sec4 .sect-inner .cont-right{
+#Sec4_about .sect-inner .cont-right{
   flex-basis: 50%;
   padding-left: 5%;
   box-sizing: border-box;
   position: relative;
 }
-#Sec4 .sect-inner .cont-right::before{
+#Sec4_about .sect-inner .cont-right::before{
   content: '';
   position: absolute;
   left: 0;
@@ -273,14 +273,14 @@
   background: #ddd;
 }
 
-#Sec4 .sect-inner .cont-left .intro-menu li{
+#Sec4_about .sect-inner .cont-left .intro-menu li{
   padding-bottom: 18px;
   
 }
-#Sec4 .sect-inner .cont-left .intro-menu li a{
+#Sec4_about .sect-inner .cont-left .intro-menu li a{
   font-size: 600;
 }
-#Sec4 .sect-inner .cont-right .tabbox{
+#Sec4_about .sect-inner .cont-right .tabbox{
   line-height: 1.5;
 }
 
@@ -294,10 +294,10 @@
 }
 
 @media screen and (max-width:1024px){
-  #Sec1 .cont-left .diagram .circle{
+  #Sec1_about .cont-left .diagram .circle{
     width: 190px; height: 190px;
   }
-  #Sec1 .sect-inner{width: 80%;}
-  #main-slider .main-item .main-text p{font-size: 43px;}
+  #Sec1_about .sect-inner{width: 80%;}
+  
   
 }

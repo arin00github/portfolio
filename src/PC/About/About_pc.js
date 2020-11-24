@@ -45,8 +45,8 @@ function About (){
 
 
     return(
-        <div>
-            <section id="Sec1" className="section-page">
+        <div id="main">
+            <section id="Sec1_about" className="about">
                 <div className="sect-inner">
                     <h2 className="sect-title">About Me</h2>
                     <p className="text01">안녕하세요. 새로운 프론트앤드 맴버가 되고 싶은 <span>이효정</span> 입니다.</p>
@@ -68,7 +68,7 @@ function About (){
                         
                 </div>    
             </section>
-            <section id="Sec2" className="section-page">
+            <section id="Sec2_about" className="about">
                 <div className="sect-inner">
                     <h2 className="sect-title">Education<br/>&Career</h2>
                     <div className="my-list">
@@ -84,7 +84,7 @@ function About (){
                     </div>
                 </div>
             </section>
-            <section id="Sec3" className="section-page">
+            <section id="Sec3_about" className="about">
                 <div className="sect-inner">
                     <div className="sect-content">
                             {
@@ -111,20 +111,20 @@ function About (){
                         <div className="stickbar-wrap">
                             <ul className="stickBar">
                                 <li><h4>Photoshop</h4><span className="bar"><span className="bar01 per"></span></span></li>
-                                <li><h4>Photoshop</h4><span className="bar"><span className="bar01 per"></span></span></li>
-                                <li><h4>Photoshop</h4><span className="bar"><span className="bar01 per"></span></span></li>
+                                <li><h4>Illustrator</h4><span className="bar"><span className="bar01 per"></span></span></li>
+                                <li><h4>Figma</h4><span className="bar"><span className="bar01 per"></span></span></li>
                             </ul>
                             <ul className="stickBar">
-                                <li><h4>Photoshop</h4><span className="bar"><span className="bar01 per"></span></span></li>
-                                <li><h4>Photoshop</h4><span className="bar"><span className="bar01 per"></span></span></li>
-                                <li><h4>Photoshop</h4><span className="bar"><span className="bar01 per"></span></span></li>
+                                <li><h4>After Effect</h4><span className="bar"><span className="bar01 per"></span></span></li>
+                                <li><h4>SketchUp</h4><span className="bar"><span className="bar01 per"></span></span></li>
+                                <li><h4>Indesign</h4><span className="bar"><span className="bar01 per"></span></span></li>
                             </ul>
                         </div>
                         
                     </div>
                 </div>
             </section>
-            <section id="Sec4">
+            <section id="Sec4_about" className="about">
                 <div className="sect-inner">
                     <div className="sect-content">
                         <div className="cont-left">

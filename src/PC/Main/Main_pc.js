@@ -1,149 +1,176 @@
 
-//import { useEffect } from 'react';
-import { useEffect, useRef } from 'react';
-import Vertical from 'react-slick';
+import { useEffect } from 'react';
+//import Vertical from 'react-slick';
 import './Main_pc.css';
 import HomeSlider from './homeSlide'
 
 function Main (){
-    const slider = useRef();
+    
+    function scrollMove (){
+        const doc = document.documentElement;
+        const section01 = document.getElementById('Sec1_main');
+        const section02 = document.getElementById('Sec2_main');
+        const section03 = document.getElementById('Sec3_main');
+        let scrollT = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
 
+        if(scrollT > section01.offsetTop -300){
+            section01.classList.add('active')
+        }else{
+            section01.classList.remove('active')
+        }
+
+        if(scrollT > section02.offsetTop - 200){
+            section02.classList.add('active')
+        }else{
+            section02.classList.remove('active')
+        }
+
+        if(scrollT > section03.offsetTop - 300){
+            section03.classList.add('active')
+        }else{
+            section03.classList.remove('active')
+        }
+    }
     
 
-    const settings={
-        dots:false,
-        arrows:false,
-        infinite:false,
-        slidesToShow : 1,
-        slidesToScroll:1,
-        vertical:true,
-        verticalSwiping:true,
-        swipeToSlide :true,
-        className : 'main-slider',
-        afterChange : function(current){
-            const gridLine = document.querySelector('.grid');
-            //const portBox = document.querySelector('.port-box');
-            if(current === 2){
-                gridLine.classList.add('active')
-            }else{
-                gridLine.classList.remove('active')
-            }
-        },
-
-
-    }
-
-    // let slickListDiv = document.getElementsByClassName('slick-list')[0]
-    // slickListDiv.addEventListener('wheel', event => {
-    //   event.preventDefault()
-    //   event.deltaY > 0 ? this.innerSlider.slickNext() : this.innerSlider.slickPrev()
-    // })
+    
 
     useEffect(()=>{
+            
+        
 
-        const section0 = document.getElementById('Sec0')
-        section0.style.width = window.innerWidth;
-        let refSlider = slider.current.innerSlider;
-        //console.log(refSlider)
-        let slickListDiv = document.getElementsByClassName('slick-list');
-        slickListDiv[0].addEventListener('mousewheel', event => {
-          event.preventDefault()
-          event.deltaY > 0 ? refSlider.slickNext() : refSlider.slickPrev()
-        })
+        document.addEventListener('scroll',scrollMove)
+
+
+        
+        return (document.addEventListener('scroll',scrollMove))
+        
     },[])
     
-    const imageData = [
-        {url : process.env.PUBLIC_URL +"/img/package/image01.jpg"},
-        {url : process.env.PUBLIC_URL +"/img/package/image02.jpg"},
-        {url : process.env.PUBLIC_URL +"/img/package/image03.jpg"},
-    ]
-
-
+    
 
     return(
         <>
         
         <div id="main" className="home">
-            <Vertical {...settings} ref={slider}>
-                <section id="Sec0" className="section-page">
+            
+                <section id="Sec0_main" className="section-page">
                     <div className="sect-inner">
                         <HomeSlider></HomeSlider>
                         <div className="name-intro">
                             <p>Lee hyojeong</p>
                             <p>portfolio</p>
                         </div>
+                        <div className="line"></div>
+                        <div className="anime">
+                            <div className="item"></div>
+                            <div className="item"></div>
+                            <div className="item"></div>
+                            <div className="item"></div>
+                            <div className="item"></div>
+                            <div className="item"></div>
+                            <div className="item"></div>
+                            <div className="item"></div>
+                            <div className="item"></div>
+                            <div className="item"></div>
+                            <div className="item"></div>
+                            <div className="item"></div>
+                            <div className="item"></div>
+                            <div className="item"></div>
+                            <div className="item"></div>
+                            <div className="item"></div>
+                        </div>
                     </div>
                 </section>
-                <section id="Sec1" className="section-page">
+                <section id="Sec1_main" className="section-page">
                     <div className="sect-inner">
-                        <h2 className="sect-title">About Me</h2>
-                        <div className="myphoto small"></div>
-                        <p className="text01">안녕하세요. 새로운 프론트앤드 맴버가 되고 싶은 <span>이효정</span> 입니다.</p>
+                        <div className="sect-title">
+                            <h2>About Me</h2>
+                            <span className="line"></span>
+                        </div>
                         <div className="sect-content">
                             <div className="cont-left">
-                                <div className="diagram">
-                                    <div className="circle left">
-                                        <span className="unit"></span>
-                                        <span className="kr">디자이너</span>
-                                        <span className="eng">Designer</span>
-                                    </div>
-                                    <div className="circle right">
-                                        <span className="unit"></span>
-                                        <span className="kr">프론트앤드</span>
-                                        <span className="eng">FrontEnd</span>
-                                    </div>
+                                <div className="text01">
+                                    <p>안녕하세요. 새로운 프론트앤드 맴버가 되고 싶은 <span>이효정</span> 입니다.</p>
                                 </div>
                                 <div className="desc">
-                                    산업디자인과를 전공했으나 디자인단계를 넘어 실제로 서비스를 구현하고 싶어 프론트앤드를 시작하게 되었습니다. 디자이너와 개발자 일을 동시에 할 수 있습니다
+                                    <p>산업디자인과를 전공했으나 디자인단계를 넘어 실제로 서비스를 구현하고 싶어 프론트앤드를 시작하게 되었습니다. 디자이너와 개발자 일을 동시에 할 수 있습니다</p>
                                 </div>
                             </div>
                             <div className="cont-right">
-                                <div className="myImage"></div>
+                                <div className="myImage">
+                                    <img src={ process.env.PUBLIC_URL +"/img/main/my_photo.jpg"} alt=""/>
+                                </div>
                             </div>
                         </div>
                             
                     </div>    
                 </section>
-                <section id="Sec2" className="section-page">
+                <section id="Sec2_main" className="section-page">
+                    <div className="sect-head"></div>
                     <div className="sect-inner">
-                        
-                        <div className="grid">
-                            <span className="line01"></span>
-                            <span className="line02"></span>
-                            <span className="line03"></span>
-                            <span className="line04"></span>
-                            <span className="line05"></span>
-                            <span className="line06"></span>
+                        <div className="sect-title">
+                            <h2>Portfolio</h2>
+                            <span className="line"></span>
                         </div>
-                        <div className="sec2-content">
-                            <div className="port-box box01">
-                                <div className="port-img">
-                                    <img src={imageData[0].url} alt=""/>
+                        <div className="sect-content">
+                            <div className="work-text">
+                                <h4>Portfolio</h4>
+                                <div className="desc">
+                                The website has passed every test site complies with web standards. Information related to this site
+                                </div>
+                                <ul className="list">
+                                    <li>4 unique portfolio layouts</li>
+                                    <li>Testimonials slider</li>
+                                    <li>Original about page layout</li>
+                                    <li>Interactive Buttons</li>
+                                </ul>
+                            </div>
+                            <div className="screen-wrap">
+                                <div className="screen pc">
+                                    <img src={process.env.PUBLIC_URL +"/img/main/mock6_1.png"} alt=""/>
+                                </div>
+                                <div className="screen tablet">
+                                    <img src={process.env.PUBLIC_URL +"/img/main/mock6_2.png"} alt=""/>
+                                </div>
+                                <div className="screen mobile">
+                                    <img src={process.env.PUBLIC_URL +"/img/main/mock6_3.png"} alt=""/>
                                 </div>
                             </div>
-                            <div className="port-box box02">
-                                <div className="port-img">
-                                    <img src={imageData[1].url} alt=""/>
-                                </div>
-                            </div>
-                            <div className="port-box box03">
-                                <div className="port-img">
-                                    <img src={imageData[2].url} alt=""/>
-                                </div>
-                            </div>
-                            <div className="sec2-text">
-                                <h3>Portfolio, while Studying FrontEnd</h3>
-                            </div>
-                        </div>
-                        <div className="sec2-content-mb">
-                            <div className="port-box"></div>
+                            
+                            
                         </div>
                     </div>
                 </section>
-                <section id="Sec3" className="section-page">
-                    <h1>section03</h1>
+                <section id="Sec3_main" className="section-page">
+                    <div className="sect-head"></div>
+                    <div className="sect-inner">
+                        <div className="sect-title">
+                            <h2>Contact</h2>
+                            <span className="line"></span>
+                        </div>
+                        <div className="sect-content">
+                            <div className="work-text">
+                                <h4>Portfolio</h4>
+                                <div className="desc">
+                                The website has passed every test site complies with web standards. Information related to this site
+                                </div>
+                                <ul className="list">
+                                    <li>4 unique portfolio layouts</li>
+                                    <li>Testimonials slider</li>
+                                    <li>Original about page layout</li>
+                                    <li>Interactive Buttons</li>
+                                </ul>
+                            </div>
+                            <div className="package-wrap">
+                                <div className="package item01">
+                                    <img src={process.env.PUBLIC_URL +"/img/main/package01.png"} alt=""/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
-            </Vertical>
+            
             
                 
                 

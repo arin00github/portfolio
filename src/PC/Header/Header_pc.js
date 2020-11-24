@@ -6,6 +6,26 @@ import './Header_pc.css';
 function Header(){
 
     useEffect(()=>{
+        const doc = document.documentElement;
+        console.log(doc)
+        const header = document.getElementById('header')
+        console.log(header)
+        
+        
+
+        document.addEventListener('scorll',function(){
+            let scrollT = window.pageYOffset
+            console.log(scrollT)
+            
+            
+            if(scrollT > 300){
+                header.classList.add('change')
+                console.log('change')
+            }else{
+                header.classList.remove('change')
+            }
+
+        })
 
         const menuList = document.getElementsByClassName('list');
         for(let i =0; i < menuList.length ; i++){

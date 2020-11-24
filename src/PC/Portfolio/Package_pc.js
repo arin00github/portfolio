@@ -78,7 +78,7 @@ function Package(){
 
     return(
         <div id="main">
-            <section id="Sec0" className="section-page package">
+            <section id="Sec0_package" className="section-page package">
                 <div className="sect-inner">
                     <h2 className="sect-title">Package Design</h2>
                     <div className="sect-content">

@@ -65,6 +65,24 @@ function PCIndex (){
             return new numberCount(target, number);
         }
         callCount('progress-text','100')
+
+
+        
+
+        // document.addEventListener('scorll',function(){
+        //     const doc = document.documentElement;;
+        //     let scrollT = window.pageYOffset;
+            
+        //     console.log(header)
+        //     if(scrollT > 300){
+        //         header.classList.add('change')
+        //         console.log('change')
+        //     }else{
+        //         header.classList.remove('change')
+        //     }
+
+        // })
+
         return callCount('progress-text','100')
     },[])
     
@@ -89,7 +107,7 @@ function PCIndex (){
         </div>
         
         <div id="wrap" className="pc">
-            <Header/>
+            <Header />
             <Suspense fallback={<div>로딩중이에요</div>}>
                 <Switch>
                     <Route exact path="/" component={Main}></Route>
