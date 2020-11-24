@@ -1,1 +1,0 @@
-{"version":3,"sources":["mobile/Contact/Contact.js"],"names":["Contact"],"mappings":"8HAMeA,UANf,WACI,OACI","file":"static/js/15.6332badf.chunk.js","sourcesContent":["function Contact (){\r\n    return(\r\n        <div></div>\r\n    )\r\n}\r\n\r\nexport default Contact;"],"sourceRoot":""}
