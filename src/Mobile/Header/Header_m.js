@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import './Header_pc.css';
+import './Header_m.css';
 
 function Header(){
 
@@ -55,19 +55,10 @@ function Header(){
 
     return(
         <>
-        <header id="header">
+        <header id="header" className="mobile">
             <div className="header-wrap">
                 <div className="header-inner">
                     <h1 className="logo"><Link to="/">Portfolio</Link></h1>
-                    <nav><ul className="gnb">
-                        <li className="list"><Link to="/About">About</Link>
-                        </li>
-                        <li className="list"><Link to="/web">Web</Link></li>
-                        <li className="list"><Link to="/package">Package</Link></li>
-                        <li className="list"><Link to="/css">CSS</Link></li>
-                        <li className="list"><Link to="/Contact">Contact</Link>
-                        </li>
-                    </ul></nav>
                     <button className="btn-header" id="openbtn">
                         <span className="line"></span>
                         <span className="line"></span>
@@ -76,7 +67,7 @@ function Header(){
                 </div>  
             </div>
         </header>
-        <div id="modal">
+        <div id="modal-w">
             <div className="modal-inner">
                 <ul className="menu">
                     <li className="list"><Link to="/About">About</Link></li>

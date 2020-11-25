@@ -1,11 +1,8 @@
 
 import './App.css';
-//import { lazy } from 'react';
-//import {BrowserView, MobileView} from 'react-device-detect'
-//import Mobile from './mobile/Mobile';
-//let Mobile = lazy(()=>{import('./mobile/Mobile')})
-//let PC = lazy(()=>{import('./PC/PC_index')})
+import {BrowserView, MobileView} from 'react-device-detect'
 import PC from './PC/PC_index'
+import Mobile from './Mobile/Mobile_index'
 
 
 function App() {
@@ -18,11 +15,12 @@ function App() {
     <div className="App">
       {/* <BrowserView>
         <PC/>
-      </BrowserView> 
+      </BrowserView>
       <MobileView>
-        <Mobile/>
+        <Mobile></Mobile>
       </MobileView> */}
-      <PC/>
+      <Mobile></Mobile>
+      
     </div>
   );
 }

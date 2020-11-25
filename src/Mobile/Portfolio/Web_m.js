@@ -1,42 +1,13 @@
 import { useEffect } from 'react';
-import './Portfolio_pc.css';
+import './Web_m.css';
 
 
 function Web(){
 
 
 
-    function scrollMove_web (){
-        const doc = document.documentElement;
-        const project01 = document.getElementById('project01');
-        const project02 = document.getElementById('project02');
-        const project03 = document.getElementById('project03');
-        let scrollT = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-        
-
-        if(scrollT > project01.offsetTop - 600){
-            project01.classList.add('active')
-        }else{
-            project01.classList.remove('active')
-        }
-        if(scrollT > project02.offsetTop - 300){
-            project02.classList.add('active')
-        }else{
-            project02.classList.remove('active')
-        }
-        if(scrollT > project03.offsetTop - 300){
-            project03.classList.add('active')
-        }else{
-            project03.classList.remove('active')
-        }
-
-        
-    }
-
-
     useEffect(()=>{
-        document.addEventListener('scroll',scrollMove_web)
-        return ()=> document.removeEventListener('scroll',scrollMove_web)
+        
     },[])
 
     const WebUrl = [

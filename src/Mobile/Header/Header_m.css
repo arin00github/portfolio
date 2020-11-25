@@ -1,0 +1,111 @@
+#header.mobile{
+    z-index: 100;
+    position: absolute;
+    width: 100%; top: 0; left: 0; right: 0;
+    padding: 20px 3% 10px 4.948%;
+    /* border-bottom: 1px solid #C5C5C5; */
+    
+  }
+
+
+
+
+
+#header.mobile .header-wrap .header-inner{
+  height: 50px;
+  display: flex;
+}
+
+
+#header.mobile .header-wrap .header-inner .btn-header {
+  width: 30px; height: 30px; top: 30px; right: 30px;
+  position: absolute;
+
+}
+#header.mobile .header-wrap .header-inner .btn-header .line{
+  position: absolute;
+   left: 0; width: 100%; height: 4px; border-radius: 2px;
+   background: #000;
+}
+#header.mobile .header-wrap .header-inner .btn-header .line:nth-child(1){
+  top: 0;
+}
+
+#header.mobile .header-wrap .header-inner .btn-header .line:nth-child(2){
+  top: 50%; transform: translateY(-50%);
+}
+
+#header.mobile .header-wrap .header-inner .btn-header .line:nth-child(3){
+  bottom: 0;
+}
+
+/****** modal  *******/
+
+#modal-w{
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #000;
+  z-index: 9999;
+  display: none;
+}
+#modal-w .modal-inner{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-w .modal-inner .menu li{
+  padding: 12px 0 ;
+  text-align: center;
+}
+#modal-w .modal-inner .menu li a{
+  color: white;
+  font-size: 22px;
+}
+#modal-w .btn-header{
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+#modal-w .btn-header .line{
+  position: absolute;
+  left: 0;
+  height: 4px;
+  border-radius: 2px;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+}
+#modal-w .btn-header .line:nth-child(1){
+  transform: rotate(-45deg);
+}
+#modal-w .btn-header .line:nth-child(2){
+  transform: rotate(45deg);
+}
+
+
+
+
+@media screen and (max-width:480px){
+  #header.mobile .header-wrap .header-inner .logo{font-size: 22px;}
+  #header.mobile{padding: 8px 3% 10px 4.948%;}
+  #header.mobile .header-wrap .header-inner .btn-header{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+  #modal-w .btn-header{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+}
