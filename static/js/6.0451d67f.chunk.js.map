@@ -1,1 +1,0 @@
-{"version":3,"sources":["PC/Portfolio/Css_pc.js"],"names":["Logo"],"mappings":"wJASeA,UANf,WACI,OACI,8BAAK","file":"static/js/6.0451d67f.chunk.js","sourcesContent":["import './Portfolio_pc.css';\r\n\r\n\r\nfunction Logo(){\r\n    return(\r\n        <div><h1>Logo</h1></div>\r\n    )\r\n}\r\n\r\nexport default Logo;"],"sourceRoot":""}
