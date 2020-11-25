@@ -68,15 +68,85 @@
   width: 80%;
   position: relative;
   margin: 0 auto;
-  display: flex;
-  padding: 40px 0;
 }
 
-#Sec2_about .sect-inner .sect-title{
+#Sec2_about .sect-inner .tab-title{
+  display: flex;
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+#Sec2_about .sect-inner .tab-title h2{
+  color: #888;
+  
+  
+}
+#Sec2_about .sect-inner .tab-title button{
+  margin-left: auto;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: #ececec;
+  position: relative;
+
+}
+
+#Sec2_about .sect-inner .tab-title .tabbtn img{
+  position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.6) rotate(90deg);
+  width: 100%; height: 100%;
+}
+
+#Sec2_about .sect-inner .tab-container{
+  height: 0; overflow: hidden;
+}
+
+#Sec2_about .sect-inner .tab-container.open{
+  animation: slidedown 1s 1 ease-in-out forwards;
+  overflow: hidden;
+}
+
+#Sec2_about .sect-inner .tab-container.close{
+  animation: slideup 1s 1 ease-in-out forwards;
+}
+
+@keyframes slidedown{
+  0%{height: 0;}
+  100%{height: 300px;}
+}
+@keyframes slideup{
+  0%{height: 300px;}
+  100%{height: 0;}
+}
+
+#Sec2_about .sect-inner .tab-title .tabbtn.open{
+  animation: rotatedown 0.7s 1 linear forwards;
+}
+
+#Sec2_about .sect-inner .tab-title .tabbtn.close{
+  animation: rotateup 0.7s 1 linear forwards;
+}
+
+@keyframes rotatedown {
+  0%{transform: rotate(0);}
+  100%{transform: rotate(180deg);}
+}
+
+@keyframes rotateup {
+  0%{transform: rotate(180deg);}
+  100%{transform: rotate(0);}
+}
+
+
+#Sec2_about .sect-inner .tab-container .sect-content{
+  display: flex; padding: 30px 0;
+}
+
+#Sec2_about .sect-inner .sect-content .sect-text{
   text-align: right;
   font-size: 40px;
   font-weight: bold;
   flex-basis: 40%;
+  color: #ddd;
 }
 
 #Sec2_about .sect-inner .my-list{
@@ -100,10 +170,9 @@
 
 
 #Sec3_about .sect-inner {
-    width: 70%;
+    width: 80%;
     position: relative;
     margin: 0 auto;
-    padding: 20px 0;
 }
   
   
@@ -113,6 +182,73 @@
     font-weight: bold;
     padding-top: 20px;
 }
+
+#Sec3_about .sect-inner .tab-title{
+  display: flex;
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+#Sec3_about .sect-inner .tab-title h2{
+  color: #888;
+  
+  
+}
+#Sec3_about .sect-inner .tab-title .tabbtn{
+  margin-left: auto;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: #ececec;
+  position: relative;
+
+}
+#Sec3_about .sect-inner .tab-title .tabbtn.open{
+  animation: rotatedown 0.7s 1 linear forwards;
+}
+
+#Sec3_about .sect-inner .tab-title .tabbtn.close{
+  animation: rotateup 0.7s 1 linear forwards;
+}
+
+@keyframes rotatedown {
+  0%{transform: rotate(0);}
+  100%{transform: rotate(180deg);}
+}
+
+@keyframes rotateup {
+  0%{transform: rotate(180deg);}
+  100%{transform: rotate(0);}
+}
+
+#Sec3_about .sect-inner .tab-title .tabbtn img{
+  position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.6) rotate(90deg);
+  width: 100%; height: 100%;
+}
+
+#Sec3_about .sect-inner .tab-container{
+  height: 0; overflow: hidden;
+}
+
+#Sec3_about .sect-inner .tab-container.open{
+  animation: slidedown2 1s 1 ease-in-out forwards;
+  overflow: hidden;
+}
+
+#Sec3_about .sect-inner .tab-container.close{
+  animation: slideup2 1s 1 ease-in-out forwards;
+}
+
+@keyframes slidedown2{
+  0%{height: 0;}
+  100%{height: 600px;}
+}
+@keyframes slideup2{
+  0%{height: 600px;}
+  100%{height: 0;}
+}
+
+
   
 #Sec3_about .sect-inner .sect-content {
   display: flex;
@@ -245,10 +381,76 @@
 
 /********  section04  **********/
 #Sec4_about .sect-inner {
-  width: 68%;
+  width: 80%;
   position: relative;
   margin: 0 auto;
-  padding: 40px 0;
+  margin-bottom: 100px;
+}
+
+#Sec4_about .sect-inner .tab-title{
+  display: flex;
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+#Sec4_about .sect-inner .tab-title h2{
+  color: #888;
+  
+  
+}
+#Sec4_about .sect-inner .tab-title button{
+  margin-left: auto;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: #ececec;
+  position: relative;
+
+}
+
+#Sec4_about .sect-inner .tab-title .tabbtn img{
+  position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.6) rotate(90deg);
+  width: 100%; height: 100%;
+}
+
+#Sec4_about .sect-inner .tab-container{
+  height: 0; overflow: hidden;
+}
+
+#Sec4_about .sect-inner .tab-container.open{
+  animation: slidedown3 1s 1 ease-in-out forwards;
+  overflow: hidden;
+}
+
+#Sec4_about .sect-inner .tab-container.close{
+  animation: slideup3 1s 1 ease-in-out forwards;
+}
+
+@keyframes slidedown3{
+  0%{height: 0;}
+  100%{height: 300px;}
+}
+@keyframes slideup3{
+  0%{height: 300px;}
+  100%{height: 0;}
+}
+
+#Sec4_about .sect-inner .tab-title .tabbtn.open{
+  animation: rotatedown 0.7s 1 linear forwards;
+}
+
+#Sec4_about .sect-inner .tab-title .tabbtn.close{
+  animation: rotateup 0.7s 1 linear forwards;
+}
+
+@keyframes rotatedown {
+  0%{transform: rotate(0);}
+  100%{transform: rotate(180deg);}
+}
+
+@keyframes rotateup {
+  0%{transform: rotate(180deg);}
+  100%{transform: rotate(0);}
 }
 
 #Sec4_about .sect-inner .sect-content{
@@ -288,16 +490,31 @@
 /********  반응형  **********/
 
 
-
-@media screen and (min-width:1200px){
-  
+@media screen and (max-width:900px){
+  #Sec1_about .sect-inner .cont-right .myImage{
+    width: 300px; height: 300px;
+  }
 }
 
-@media screen and (max-width:1024px){
-  #Sec1_about .cont-left .diagram .circle{
-    width: 190px; height: 190px;
+@media screen and (max-width:768px){
+  #Sec1_about .sect-inner{width: 86%;}
+  #Sec2_about .sect-inner{width: 86%;}
+  #Sec3_about .sect-inner{width: 86%;}
+  #Sec4_about .sect-inner{width: 86%;}
+  #Sec1_about .sect-inner .cont-right{
+    width: 42%; margin-left: 3%;
   }
-  #Sec1_about .sect-inner{width: 80%;}
-  
+  #Sec1_about .sect-inner .cont-right .myImage{
+    width: 270px; height: 270px;
+  }
+}
+@media screen and (max-width:660px){
+  #Sec1_about .sect-inner .cont-left{width: 100%;}
+  #Sec1_about .cont-left .desc{margin-left: 0;}
+  #Sec1_about .sect-inner .cont-right{
+    display: none;
+  }
+  .stickbar-wrap .stickBar:nth-child(1){margin-right: 4%;}
+  .stickbar-wrap .stickBar{flex-basis: 48%;}
   
 }

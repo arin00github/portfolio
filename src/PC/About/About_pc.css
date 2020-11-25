@@ -6,7 +6,7 @@
 }
    
 
-#Sec1_about .sect-inner {
+#Sec1_about .sect-inner { 
   width: 80%;
   position: relative;
   margin: 0 auto;
@@ -68,10 +68,9 @@
   width: 80%;
   position: relative;
   margin: 0 auto;
-  display: flex;
+  ;
   padding: 40px 0;
 }
-
 #Sec2_about .sect-inner .sect-title{
   text-align: right;
   font-size: 40px;
@@ -79,7 +78,18 @@
   flex-basis: 40%;
 }
 
-#Sec2_about .sect-inner .my-list{
+#Sec2_about .sect-inner .sect-content{
+  display: flex
+}
+
+#Sec2_about .sect-inner .sect-content .sect-text{
+  text-align: right;
+  font-size: 40px;
+  font-weight: bold;
+  flex-basis: 40%;
+}
+
+#Sec2_about .sect-inner .sect-content .my-list{
   margin-left: 30px;
   flex-basis: calc(60% - 30px);
 }

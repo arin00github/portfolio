@@ -2,24 +2,32 @@ import './About_m.css';
 import { useEffect } from 'react';
 
 function About (){
-    useEffect(()=>{
-        const menuList = document.querySelectorAll('.intro-menu li a');
-        const tabAll = document.querySelectorAll('.tabbox');
-        for(let i =0 ; i< tabAll.length ;i++){
-            tabAll[i].style.display = 'none'
-        }
 
-        menuList.forEach((list)=>{
-            list.addEventListener('click',function(){
-                let hrefValue = list.getAttribute('href');
-                let changeHref = hrefValue.replace('#','');
-                for(let i =0 ; i< tabAll.length ;i++){
-                    tabAll[i].style.display = 'none'
-                }
-                document.getElementById(changeHref).style.display = "block";
-            })
-            
-        })
+
+    
+    useEffect(()=>{ 
+       
+       const tabBtn = document.getElementsByClassName('tabbtn')
+
+       for(let i =0; i < tabBtn.length ; i++){
+           tabBtn[i].addEventListener('click',()=>{
+                let child = tabBtn[i].children[0];
+               let tabattr = child.getAttribute('href')
+               let changattr = tabattr.replace('#','')
+               let findTab = document.getElementById(changattr);
+               if(findTab.classList.contains('close') || !findTab.classList.contains('open')){
+                   findTab.classList.add('open')
+                   findTab.classList.remove('close')
+                   tabBtn[i].classList.add('open')
+                   tabBtn[i].classList.remove('close')
+               }else if(findTab.classList.contains('open')){
+                    findTab.classList.remove('open')
+                    findTab.classList.add('close')
+                    tabBtn[i].classList.remove('open')
+                    tabBtn[i].classList.add('close')
+               }
+           })
+       }
         
     },[])
 
@@ -70,22 +78,45 @@ function About (){
             </section>
             <section id="Sec2_about" className="about">
                 <div className="sect-inner">
-                    <h2 className="sect-title">Education<br/>&Career</h2>
-                    <div className="my-list">
-                        <ul>
-                            {
-                                careerData.map((item, i)=>{
-                                    return(
-                                    <li key={i}><span>{item.period}</span><span>{item.activity}</span></li>
-                                    )
-                                })
-                            }
-                        </ul>
+                    <div className="tab-title">
+                        <h2>Education & Career</h2>
+                        <button className="tabbtn" >
+                            <a href="#tab01">
+                                <img src={process.env.PUBLIC_URL +"/img/icon/free-icon-back.png"} alt=""/>
+                            </a>
+                        </button>
                     </div>
+                    <div className="tab-container" id="tab01" >
+                        <div className="sect-content">
+                            <h2 className="sect-text">Education<br/>&Career</h2>
+                            <div className="my-list">
+                                <ul>
+                                    {
+                                        careerData.map((item, i)=>{
+                                            return(
+                                            <li key={i}><span>{item.period}</span><span>{item.activity}</span></li>
+                                            )
+                                        })
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    
                 </div>
             </section>
             <section id="Sec3_about" className="about">
                 <div className="sect-inner">
+                    <div className="tab-title">
+                        <h2>My Skill</h2>
+                        <button className="tabbtn" >
+                            <a href="#tab02">
+                                <img src={process.env.PUBLIC_URL +"/img/icon/free-icon-back.png"} alt=""/>
+                            </a>
+                        </button>
+                    </div>
+                    <div className="tab-container" id="tab02">
                     <div className="sect-content">
                             {
                                 chartData.map((skill, idx)=>{
@@ -122,26 +153,41 @@ function About (){
                         </div>
                         
                     </div>
+
+                    </div>
+                    
                 </div>
             </section>
             <section id="Sec4_about" className="about">
                 <div className="sect-inner">
-                    <div className="sect-content">
-                        <div className="cont-left">
-                            <ul className="intro-menu">
-                                <li><a href="#tab01">6년동안 변하지 않은 성실함</a></li>
-                                <li><a href="#tab02">어려워야 도전하는 재미가 있다</a></li>
-                                <li><a href="#tab03">협업하기 좋은 사람</a></li>
-                                <li><a href="#tab04">동료들이 인정하는 워커홀릭</a></li>
-                            </ul>
-                        </div>
-                        <div className="cont-right">
-                            <div className="tabbox" id="tab01">저에게 내려진 직무는 책임감 있는 태도로 성실하게 임할 수 있습니다. 대학교 동안에 미술학원 강사 알바를 한곳에서 6년동안 꾸준히 한 경력이 있습니다. 대입을 준비하는 고3학생들을 담당했기 때문에 꾸준히 나올 수 있도록 스케줄 관리를 잘 하였습니다 </div>
-                            <div className="tabbox" id="tab02">과제나 직무가 어렵더라도 당황하거나 좌절하지 않습니다. 이번 프론트앤드 공부 시작도 난이도가 올라갈 수록 재미가 있었고, 드디어 제대로 배운다는 생각이 들었습니다. 시간이 나면 잘만든 홈페이지 소스코드를 보면서 어떻게 만들었는지 분석하거나 따라해보기 하는데 상당히 재밌습니다.</div>
-                            <div className="tabbox" id="tab03">언제나 협업하기 좋은 사람이 되도록 노력합니다. 2년간 회사를 다니면서 타 부서에 관한 일도 이해를 하고 있는 것이 중요하다는 것을 느꼈습니다. 같은 부서의 동료가 일을 다하기 힘들어 하면 일의 분량을 덜어 도와주기도 합니다.</div>
-                            <div className="tabbox" id="tab04">동료들이 인정하는 워커홀릭입니다. 언제나 협업하기 좋은 사람이 되도록 노력합니다. 2년간 회사를 다니면서 타 부서에 관한 일도 이해를 하고 있는 것이 중요하다는 것을 느꼈습니다. 같은 부서의 동료가 일을 다하기 힘들어 하면 일의 분량을 덜어 도와주기도 합니다.</div>
+                    <div className="tab-title">
+                        <h2>Education & Career</h2>
+                        <button  className="tabbtn" >
+                            <a href="#tab03">
+                                <img src={process.env.PUBLIC_URL +"/img/icon/free-icon-back.png"} alt=""/>
+                            </a>
+                        </button>
+                    </div>
+                    <div className="tab-container" id="tab03">
+                        <div className="sect-content">
+                            동료들이 인정하는 워커홀릭입니다. 언제나 협업하기 좋은 사람이 되도록 노력합니다. 2년간 회사를 다니면서 타 부서에 관한 일도 이해를 하고 있는 것이 중요하다는 것을 느꼈습니다. 같은 부서의 동료가 일을 다하기 힘들어 하면 일의 분량을 덜어 도와주기도 합니다.
+                            {/* <div className="cont-left">
+                                <ul className="intro-menu">
+                                    <li><a href="#tab01">6년동안 변하지 않은 성실함</a></li>
+                                    <li><a href="#tab02">어려워야 도전하는 재미가 있다</a></li>
+                                    <li><a href="#tab03">협업하기 좋은 사람</a></li>
+                                    <li><a href="#tab04">동료들이 인정하는 워커홀릭</a></li>
+                                </ul>
+                            </div>
+                            <div className="cont-right">
+                                <div className="tabbox" id="tab01">저에게 내려진 직무는 책임감 있는 태도로 성실하게 임할 수 있습니다. 대학교 동안에 미술학원 강사 알바를 한곳에서 6년동안 꾸준히 한 경력이 있습니다. 대입을 준비하는 고3학생들을 담당했기 때문에 꾸준히 나올 수 있도록 스케줄 관리를 잘 하였습니다 </div>
+                                <div className="tabbox" id="tab02">과제나 직무가 어렵더라도 당황하거나 좌절하지 않습니다. 이번 프론트앤드 공부 시작도 난이도가 올라갈 수록 재미가 있었고, 드디어 제대로 배운다는 생각이 들었습니다. 시간이 나면 잘만든 홈페이지 소스코드를 보면서 어떻게 만들었는지 분석하거나 따라해보기 하는데 상당히 재밌습니다.</div>
+                                <div className="tabbox" id="tab03">언제나 협업하기 좋은 사람이 되도록 노력합니다. 2년간 회사를 다니면서 타 부서에 관한 일도 이해를 하고 있는 것이 중요하다는 것을 느꼈습니다. 같은 부서의 동료가 일을 다하기 힘들어 하면 일의 분량을 덜어 도와주기도 합니다.</div>
+                                <div className="tabbox" id="tab04">동료들이 인정하는 워커홀릭입니다. 언제나 협업하기 좋은 사람이 되도록 노력합니다. 2년간 회사를 다니면서 타 부서에 관한 일도 이해를 하고 있는 것이 중요하다는 것을 느꼈습니다. 같은 부서의 동료가 일을 다하기 힘들어 하면 일의 분량을 덜어 도와주기도 합니다.</div>
+                            </div> */}
                         </div>
                     </div>
+                    
                 </div>
             </section>
         </div>

@@ -6,21 +6,12 @@ import './Header_pc.css';
 function Header(){
 
     useEffect(()=>{
-        const openBtn = document.getElementById('openbtn')
-        const closeBtn = document.getElementById('closebtn')
-        const modal = document.getElementById('modal')
         const doc = document.documentElement;
         console.log(doc)
         const header = document.getElementById('header')
         console.log(header)
 
-        openBtn.addEventListener('click',function(){
-            modal.style.display = "block"
-        })
-
-        closeBtn.addEventListener('click',function(){
-            modal.style.display = "none"
-        })
+        
         
         
 
@@ -55,7 +46,7 @@ function Header(){
 
     return(
         <>
-        <header id="header">
+        <header id="header" className="pc">
             <div className="header-wrap">
                 <div className="header-inner">
                     <h1 className="logo"><Link to="/">Portfolio</Link></h1>
@@ -68,29 +59,9 @@ function Header(){
                         <li className="list"><Link to="/Contact">Contact</Link>
                         </li>
                     </ul></nav>
-                    <button className="btn-header" id="openbtn">
-                        <span className="line"></span>
-                        <span className="line"></span>
-                        <span className="line"></span>
-                    </button>
                 </div>  
             </div>
         </header>
-        <div id="modal">
-            <div className="modal-inner">
-                <ul className="menu">
-                    <li className="list"><Link to="/About">About</Link></li>
-                    <li className="list"><Link to="/web">Web</Link></li>
-                    <li className="list"><Link to="/package">Package</Link></li>
-                    <li className="list"><Link to="/css">CSS</Link></li>
-                    <li className="list"><Link to="/Contact">Contact</Link></li>
-                </ul>
-            </div>
-            <button className="btn-header" id="closebtn">
-                <span className="line"></span>
-                <span className="line"></span>
-            </button>
-        </div>
         </>
     )
 }

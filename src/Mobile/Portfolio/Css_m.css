@@ -1,0 +1,71 @@
+#wrap{
+    margin: 0 auto;
+}
+
+#main {
+    position: absolute;
+    top: 110px;
+    width: 100%;
+    max-width: 1024px;
+}
+
+#Sec0_css .sect-inner {
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+}
+
+#Sec0_css .sect-inner .sect-title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 60px;
+    padding-top: 20px;
+    color: #6D6D6D;
+}
+#Sec0_css .sect-inner .sect-content{
+    width: 100%;
+}
+
+#Sec0_css .sect-inner .sect-content .card{
+    margin-bottom: 24px;
+    display: flex;
+    overflow: hidden;
+}
+
+#Sec0_css .sect-inner .sect-content .card .card-desc{
+    flex-basis: 40%;
+}
+#Sec0_css .sect-inner .sect-content .card .card-source{
+    flex-basis: 56%;
+    margin-left: 4%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+@media screen and (max-width:860px){
+    #Sec0_css .sect-inner .sect-content .card .card-desc{flex-basis: 36%;}
+    #Sec0_css .sect-inner .sect-content .card .card-source{
+        flex-basis: 60%;
+    }
+}
+
+@media screen and (max-width:768px){
+    #Sec0_css .sect-inner .sect-content .card .card-desc{flex-basis: 30%;}
+    #Sec0_css .sect-inner .sect-content .card .card-source{
+        flex-basis: 66%;
+    }
+}
+
+@media screen and (max-width:600px){
+    #Sec0_css .sect-inner{width: 90%;}
+    #Sec0_css .sect-inner .sect-content .card{
+        display: block;
+    }
+    #Sec0_css .sect-inner .sect-content .card .card-desc{margin-bottom: 12px;}
+    #Sec0_css .sect-inner .sect-content .card .card-source{
+        margin-left: 0;
+    }
+}

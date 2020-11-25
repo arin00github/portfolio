@@ -1,12 +1,14 @@
 #wrap.mobile{
     width: 100%;
     max-width: 1024px;
+    margin: 0 auto;
 }
 
 #wrap.mobile #main {
     position: absolute;
     top: 110px;
     width: 100%;
+    max-width: 1024px;
 }
 
 

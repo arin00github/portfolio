@@ -1,0 +1,35 @@
+#box01{
+    width: 100%;
+    height: 100%;
+}
+
+#box01 section {
+    position: relative; overflow: hidden;
+    width: 100%; height: 100%; display: flex;
+}
+#box01 section div{
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: #0e2330;
+}
+#box01 section div:nth-child(2){
+    background: #e91e63;
+    clip-path: circle(100px at center);
+}
+#box01 section div h2{
+    color: white; position: absolute;
+    left: 0; font-size: 3em; white-space: nowrap;
+    cursor: default; top: 30%; 
+    animation: lineup 60s linear infinite;
+    animation-play-state: paused;
+}
+#box01 section div:nth-child(2) h2{
+    color: yellow;
+}
+@keyframes lineup{
+    0%{transform: translateX(0);}
+    100%{transform: translateX(-100%);}
+}
+#box01:hover section div h2{
+    animation-play-state: running;
+}
