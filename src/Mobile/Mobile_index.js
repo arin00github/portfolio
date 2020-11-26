@@ -90,7 +90,7 @@ function MobileIndex (){
 
     return(
         <>
-        <div className="progress" id="progress">
+        <div className="mobile" id="progress">
             <div id="loading">
                 <div className="loading-text">
                     <span className="loading-text-words">L</span>

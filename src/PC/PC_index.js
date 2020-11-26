@@ -15,6 +15,7 @@ let Main = lazy(()=>{return import('./Main/Main_pc')});
 let About = lazy(()=>{return import('./About/About_pc')});
 let Web = lazy(()=>{return import('./Portfolio/Web_pc')});
 let Package = lazy(()=>{return import('./Portfolio/Package_pc')});
+let Logo = lazy(()=>{return import('./Portfolio/Logo_pc')});
 let CSSEffect = lazy(()=>{return import('./Portfolio/Css_pc')});
 let Contact = lazy(()=>{return import('./Contact/Contact_pc')});
 
@@ -90,7 +91,7 @@ function PCIndex (){
 
     return(
         <>
-        <div className="progress" id="progress">
+        <div className="pc" id="progress">
             <div id="loading">
                 <div className="loading-text">
                     <span className="loading-text-words">L</span>
@@ -113,6 +114,7 @@ function PCIndex (){
                     <Route exact path="/" component={Main}></Route>
                     <Route path="/About" component={About}></Route>
                     <Route path="/web" component={Web}></Route>
+                    <Route path="/logo" component={Logo}></Route>
                     <Route path="/package" component={Package}></Route>
                     <Route path="/css" component={CSSEffect}></Route>
                     <Route path="/Contact" component={Contact}></Route>

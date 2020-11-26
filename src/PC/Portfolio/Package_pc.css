@@ -1,0 +1,51 @@
+#main {
+    position: absolute;
+    top: 110px;
+    width: 100%;
+}
+
+
+
+/***** package page*****/
+
+#Sec0_package .sect-inner {
+    width: 70%;
+    position: relative;
+    margin: 0 auto;
+}
+#Sec0_package .sect-inner .sect-title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 60px;
+    padding-top: 20px;
+    color: #6D6D6D;
+    }
+
+#Sec0_package.package .sect-content {
+    position: relative;
+    height: 570px;
+}
+
+#Sec0_package.package .sect-content .work-text{
+    left: 6%;
+    top: 30%;
+    width: 40%;
+    position: absolute;
+}
+#Sec0_package.package .sect-content .pack-item{
+    right: 3%;
+    bottom: 0;
+    width: 55%;
+    position: absolute;
+}
+
+@media screen and (min-width:1400px){
+    #Sec0_package .sect-inner{width: 60%;}
+    #Sec0_package.package .sect-content .pack-item{width: 44%; right: 10%;}
+}
+
+@media screen and (min-width:1280px){
+    #Sec0_package.package .sect-content .work-text{left: 6%;}
+    #Sec0_package.package .sect-content .pack-item{right: 6%; width: 50%;}
+}

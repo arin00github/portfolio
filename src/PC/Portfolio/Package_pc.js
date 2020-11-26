@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Portfolio_pc.css';
+import './Package_pc.css';
 
 
 
@@ -14,14 +14,15 @@ function Package(){
     const imageUrl = [
         {
             index : 0,
-            url : process.env.PUBLIC_URL +"/img/package/image01.jpg",
+            url : window.location.origin +"/img/package/image03_thum.png",
             subimg : [process.env.PUBLIC_URL +"/img/package/image01_01.jpg",
                     process.env.PUBLIC_URL +"/img/package/image01_02.jpg",
                     process.env.PUBLIC_URL +"/img/package/image01_03.jpg",
         ]},
         {
+            id:"package01",
             index : 1,
-            url : process.env.PUBLIC_URL +"/img/package/image02.jpg",
+            url : process.env.PUBLIC_URL +"/img/package/image04_thum.png",
             subimg : [process.env.PUBLIC_URL +"/img/package/image02_01.jpg",
                     process.env.PUBLIC_URL +"/img/package/image02_02.jpg",
                     process.env.PUBLIC_URL +"/img/package/image02_03.jpg",
@@ -29,15 +30,17 @@ function Package(){
         },
             
         {
+            id:"package02",
             index : 2,
-            url : process.env.PUBLIC_URL +"/img/package/image03.jpg",
+            url : process.env.PUBLIC_URL +"/img/package/image03_thum.png",
             subimg : [process.env.PUBLIC_URL +"/img/package/image03_01.jpg",
             process.env.PUBLIC_URL +"/img/package/image03_02.jpg",
             process.env.PUBLIC_URL +"/img/package/image03_03.jpg",
         ]},
         {
+            id:"package03",
             index : 3,
-            url : process.env.PUBLIC_URL +"/img/package/image04.jpg",
+            url : process.env.PUBLIC_URL +"/img/package/image04_thum.png",
             subimg : [process.env.PUBLIC_URL +"/img/package/image04_01.jpg",
                     process.env.PUBLIC_URL +"/img/package/image04_02.jpg",
                     process.env.PUBLIC_URL +"/img/package/image04_03.jpg",
@@ -45,22 +48,25 @@ function Package(){
         },
             
         {
+            id:"package04",
             index : 4,
-            url : process.env.PUBLIC_URL +"/img/package/image05.jpg",
+            url : process.env.PUBLIC_URL +"/img/package/image05_thum.png",
             subimg : [process.env.PUBLIC_URL +"/img/package/image05_01.jpg",
             process.env.PUBLIC_URL +"/img/package/image05_02.jpg",
             process.env.PUBLIC_URL +"/img/package/image05_03.jpg",
         ]},
         {
+            id:"package05",
             index : 5,
-            url : process.env.PUBLIC_URL +"/img/package/image06.jpg",
+            url : process.env.PUBLIC_URL +"/img/package/image06_thum.png",
             subimg : [process.env.PUBLIC_URL +"/img/package/image06_01.jpg",
             process.env.PUBLIC_URL +"/img/package/image06_02.jpg",
             process.env.PUBLIC_URL +"/img/package/image06_03.jpg",
         ]},
         {
+            id:"package06",
             index : 6,
-            url : process.env.PUBLIC_URL +"/img/package/image07.jpg",
+            url : process.env.PUBLIC_URL +"/img/package/image07_thum.png",
             subimg : [process.env.PUBLIC_URL +"/img/package/image07_01.jpg",
                     process.env.PUBLIC_URL +"/img/package/image07_02.jpg",
                     process.env.PUBLIC_URL +"/img/package/image07_03.jpg",
@@ -81,46 +87,33 @@ function Package(){
             <section id="Sec0_package" className="section-page package">
                 <div className="sect-inner">
                     <h2 className="sect-title">Package Design</h2>
-                    <div className="sect-content">
-                        {imageUrl.map((item, i)=>{
+                    {
+                        imageUrl.map((item,index)=>{
                             return(
-                                <div className="card" key={i}>
-                                    <img src={item.url} alt=""/>
-                                    <div className="hoverbg" onClick={()=>{
-                                        handleClick(i)
-                                    }}>자세히보기</div>
-                                    
+                                <div className="sect-content" id={item.id} key={index}>
+                                    <div className="work-text">
+                                        <h4>RDC 1945</h4>
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis impedit nam consectetur, commodi nisi laborum dolorem vel cumque quidem laudantium dicta non rerum voluptatum? Facilis eum consequatur ipsam modi voluptatum?</p>
+                                    </div>
+                                    <div className="pack-item">
+                                        <img src={item.url} alt=""/>
+                                    </div>
                                 </div>
                             )
-                        })}
-                        
-                    </div>
+                        })
+                    }
                     
-                </div>
-                {visible 
-                ? <div id="modal">
-                    <div className="img-area">
-                    <div className="img-wrap">
-                        <div className="img-box">
-                            <img src={imageUrl[index].subimg[0]} alt=""/>
-                        </div>
-                        <div className="img-box">
-                            <img src={imageUrl[index].subimg[1]} alt=""/>
-                        </div>
-                        <div className="img-box">
-                            <img src={imageUrl[index].subimg[2]} alt=""/>
-                        </div>
-                    </div>
-                    </div>
                     
                     
                 
-                <button id="close-modal-btn" onClick={()=>{setVisible(false)}}>
-                    <span></span>
-                    <span></span>
-                </button>
-                </div> 
-                : null}
+                
+                
+                
+                </div>
+                
+                    
+                
+                
             </section>
         </div>
     )

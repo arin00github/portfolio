@@ -26,7 +26,7 @@ function App() {
       <MobileView>
         <Mobile></Mobile>
       </MobileView> */}
-      <Mobile></Mobile>
+     <PC/>
       
       
     </div>

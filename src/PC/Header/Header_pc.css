@@ -1,7 +1,6 @@
 #wrap.pc #header.pc{
     z-index: 100;
     position: absolute;
-    max-width: 1024px;
     width: 100%; top: 0; left: 0; right: 0;
     padding: 20px 3% 10px 4.948%;
     /* border-bottom: 1px solid #C5C5C5; */

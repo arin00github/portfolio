@@ -55,6 +55,7 @@ function Header(){
                         </li>
                         <li className="list"><Link to="/web">Web</Link></li>
                         <li className="list"><Link to="/package">Package</Link></li>
+                        <li className="list"><Link to="/logo">Logo</Link></li>
                         <li className="list"><Link to="/css">CSS</Link></li>
                         <li className="list"><Link to="/Contact">Contact</Link>
                         </li>
