@@ -1,0 +1,1 @@
+{"version":3,"sources":["PC/Contact/Contact_pc.js"],"names":["Contact"],"mappings":"8HAMeA,UANf,WACI,OACI,8BAAK","file":"static/js/16.dc8e1526.chunk.js","sourcesContent":["function Contact(){\r\n    return(\r\n        <div><h1>Contact</h1></div>\r\n    )\r\n}\r\n\r\nexport default Contact;"],"sourceRoot":""}
