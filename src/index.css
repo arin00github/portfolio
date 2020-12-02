@@ -21,6 +21,8 @@ body {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* overflow-x: hidden; */
 }
 
 code {
@@ -74,4 +76,9 @@ button {
 a{
 	text-decoration: none;
 	color: black;
+}
+
+p{
+	letter-spacing: 1px;
+	word-break: keep-all;
 }

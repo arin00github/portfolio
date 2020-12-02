@@ -1,6 +1,6 @@
 
 import './App.css';
-import {BrowserView, isMobile, MobileView} from 'react-device-detect'
+import {BrowserView, MobileView} from 'react-device-detect'
 import PC from './PC/PC_index'
 import Mobile from './Mobile/Mobile_index'
 import { useEffect } from 'react';
@@ -20,13 +20,13 @@ function App() {
   
   return (
     <div className="App" id="App">
-      {/* <BrowserView>
+      <BrowserView>
         <PC/>
       </BrowserView>
       <MobileView>
         <Mobile></Mobile>
-      </MobileView> */}
-     <PC/>
+      </MobileView>
+     
       
       
     </div>

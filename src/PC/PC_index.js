@@ -65,24 +65,14 @@ function PCIndex (){
         function callCount(target, number) {
             return new numberCount(target, number);
         }
+
+        
         callCount('progress-text','100')
 
 
         
 
-        // document.addEventListener('scorll',function(){
-        //     const doc = document.documentElement;;
-        //     let scrollT = window.pageYOffset;
-            
-        //     console.log(header)
-        //     if(scrollT > 300){
-        //         header.classList.add('change')
-        //         console.log('change')
-        //     }else{
-        //         header.classList.remove('change')
-        //     }
-
-        // })
+       
 
         return callCount('progress-text','100')
     },[])
@@ -114,7 +104,7 @@ function PCIndex (){
                     <Route exact path="/" component={Main}></Route>
                     <Route path="/About" component={About}></Route>
                     <Route path="/web" component={Web}></Route>
-                    <Route path="/logo" component={Logo}></Route>
+                    {/* <Route path="/logo" component={Logo}></Route> */}
                     <Route path="/package" component={Package}></Route>
                     <Route path="/css" component={CSSEffect}></Route>
                     <Route path="/Contact" component={Contact}></Route>

@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 
 function About (){
 
+    
+
 
     
     useEffect(()=>{ 
@@ -10,22 +12,29 @@ function About (){
        const tabBtn = document.getElementsByClassName('tabbtn')
 
        for(let i =0; i < tabBtn.length ; i++){
-           tabBtn[i].addEventListener('click',()=>{
+           tabBtn[i].addEventListener('click',(e)=>{
+
+            if(e.target.classList.contains('tabbtn')){
                 let child = tabBtn[i].children[0];
-               let tabattr = child.getAttribute('href')
-               let changattr = tabattr.replace('#','')
-               let findTab = document.getElementById(changattr);
-               if(findTab.classList.contains('close') || !findTab.classList.contains('open')){
-                   findTab.classList.add('open')
-                   findTab.classList.remove('close')
-                   tabBtn[i].classList.add('open')
-                   tabBtn[i].classList.remove('close')
-               }else if(findTab.classList.contains('open')){
-                    findTab.classList.remove('open')
-                    findTab.classList.add('close')
-                    tabBtn[i].classList.remove('open')
-                    tabBtn[i].classList.add('close')
-               }
+                let tabattr = child.getAttribute('href')
+                let changattr = tabattr.replace('#','')
+                let findTab = document.getElementById(changattr);
+                if(findTab.classList.contains('close') || !findTab.classList.contains('open')){
+                    findTab.classList.add('open')
+                    findTab.classList.remove('close')
+                    tabBtn[i].classList.add('open')
+                    tabBtn[i].classList.remove('close')
+                }else if(findTab.classList.contains('open')){
+                     findTab.classList.remove('open')
+                     findTab.classList.add('close')
+                     tabBtn[i].classList.remove('open')
+                     tabBtn[i].classList.add('close')
+                }
+            }else if(e.target.classList.contains('not')){
+                e.preventDefault();
+               
+            }
+              
            })
        }
         
@@ -44,10 +53,14 @@ function About (){
         },
     ]
     const chartData = [
-        {code:'HTML', percent : 90},
-        {code:'CSS', percent : 96},
-        {code:'Javascript', percent : 80},
-        {code:'React', percent : 80}
+        {code:'HTML', percent : 90,
+        desc:["웹표준의 대한 이해","svg, iframe등의 신기능 활용." ,"DOM구조의 효율적인 코딩."]},
+        {code:'CSS', percent : 96,
+        desc:["폰트,색상,형태 등 자유자재 표현","CSS최신기능 이해" ,"적극적인 animation효과 사용"]},
+        {code:'Javascript', percent : 80,
+        desc:["객체,함수 개념의 이해","JQuery 사용 가능" ,"스크린 상의 돔을 조작하는 데 능숙"]},
+        {code:'React', percent : 80,
+        desc:["class,function 타입 모두 가능","react연관 라이브러리 소스를 사용" ,"redux를 이용한 데이터바인딩 능력"]}
     ]
 
 
@@ -81,8 +94,8 @@ function About (){
                     <div className="tab-title">
                         <h2>Education & Career</h2>
                         <button className="tabbtn" >
-                            <a href="#tab01">
-                                <img src={process.env.PUBLIC_URL +"/img/icon/free-icon-back.png"} alt=""/>
+                            <a href="#tab01" className="not">
+                                <img src={process.env.PUBLIC_URL +"/img/icon/free-icon-back.png"} alt="" className="btnimg"/>
                             </a>
                         </button>
                     </div>
@@ -111,8 +124,8 @@ function About (){
                     <div className="tab-title">
                         <h2>My Skill</h2>
                         <button className="tabbtn" >
-                            <a href="#tab02">
-                                <img src={process.env.PUBLIC_URL +"/img/icon/free-icon-back.png"} alt=""/>
+                            <a href="#tab02" className="not">
+                                <img src={process.env.PUBLIC_URL +"/img/icon/free-icon-back.png"} alt="" className="btnimg"/>
                             </a>
                         </button>
                     </div>
@@ -132,6 +145,13 @@ function About (){
                                                         <h3 className="text">{skill.code}</h3>
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <div className="card-list">
+                                                <ul>
+                                                    <li>{skill.desc[0]}</li>
+                                                    <li>{skill.desc[1]}</li>
+                                                    <li>{skill.desc[2]}</li>
+                                                </ul>
                                             </div>
                                         </div>
                                     )
@@ -163,8 +183,8 @@ function About (){
                     <div className="tab-title">
                         <h2>Education & Career</h2>
                         <button  className="tabbtn" >
-                            <a href="#tab03">
-                                <img src={process.env.PUBLIC_URL +"/img/icon/free-icon-back.png"} alt=""/>
+                            <a href="#tab03" className="not">
+                                <img src={process.env.PUBLIC_URL +"/img/icon/free-icon-back.png"} alt="" className="btnimg"/>
                             </a>
                         </button>
                     </div>
