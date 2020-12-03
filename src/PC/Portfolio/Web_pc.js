@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import './Web_pc.css';
-import webData from './Data/webData'
-
+import webData from './Data/webData';
+import Footer from '../Footer/Footer_pc';
 
 function Web(){
 
@@ -87,6 +87,7 @@ function Web(){
                 </div>
                         
             </section>
+            <Footer/>
         </div>
     ) 
 }

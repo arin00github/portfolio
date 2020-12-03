@@ -1,7 +1,7 @@
 import { useEffect,useState } from 'react';
 import './Package_pc.css';
 import packInfo from './Data/PackageData'
-
+import Footer from '../Footer/Footer_pc';
 
 
 function Package(){
@@ -63,7 +63,7 @@ function Package(){
                             return(
                                 <div className="sect-content" id={item.id} key={index}>
                                     <div className="work-text">
-                                        <h4>{item.title}</h4>
+                                        <h4 number={index + 1}>{item.title}</h4>
                                         <p>{item.desc}</p>
                                         <div className="btn-wrap">
                                             <button className="morebtn"
@@ -110,6 +110,7 @@ function Package(){
                 }
         
             </section>
+            <Footer/>
         </div>
     )
 }

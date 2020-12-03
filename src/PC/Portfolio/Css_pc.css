@@ -25,10 +25,12 @@
 #Sec0_css.pc .sect-inner .sect-title p{
     font-size: 16px;
     color: #ccc;
+    text-align: center;
 }
 
 #Sec0_css.pc .sect-inner .sect-content{
     width: 100%;
+    margin-top: 80px;
 }
 
 #Sec0_css.pc .sect-inner .sect-content .card{
@@ -44,12 +46,14 @@
     color: #6D6D6D;
 }
 
-#Sec0_css.pc .sect-inner .sect-content .card .card-desc{
+/* #Sec0_css.pc .sect-inner .sect-content .card .card-desc{
     flex-basis: 26%;
-}
+} */
 #Sec0_css.pc .sect-inner .sect-content .card .card-source{
-    flex-basis: 70%;
-    margin-left: 4%;
+    /* flex-basis: 70%;
+    margin-left: 4%; */
+    width: 80%;
+    margin: 0 auto;
     height: 380px;
     overflow: hidden;
     position: relative;

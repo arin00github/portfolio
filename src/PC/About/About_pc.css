@@ -258,6 +258,11 @@
   text-align: center;
   margin-bottom: 24px;
 }
+#Sec3_about.pc .skill-desc .skill-desc-inner{
+  overflow: hidden;
+  transform: translateY(0);
+}
+
 #Sec3_about.pc .skill-desc h3{
   font-size: 24px;
   margin-bottom: 12px;
@@ -320,22 +325,22 @@
   stroke-dasharray: 440;
 }
 
-.card:nth-child(1) .percent svg circle{
+#Sec3_about.pc .card:nth-child(1) .percent svg circle{
   stroke-dashoffset: calc(440 - (440*90) / 100);
 }
-.card:nth-child(2) .percent svg circle{
+#Sec3_about.pc .card:nth-child(2) .percent svg circle{
   stroke-dashoffset: calc(440 - (440*90) / 100);
 }
-.card:nth-child(3) .percent svg circle{
+#Sec3_about.pc .card:nth-child(3) .percent svg circle{
   stroke-dashoffset: calc(440 - (440*90) / 100);
 }
-.card:nth-child(4) .percent svg circle{
+#Sec3_about.pc .card:nth-child(4) .percent svg circle{
   stroke-dashoffset: calc(440 - (440*90) / 100);
 }
-.card:nth-child(5) .percent svg circle{
+#Sec3_about.pc .card:nth-child(5) .percent svg circle{
   stroke-dashoffset: calc(440 - (440*90) / 100);
 }
-.card:nth-child(6) .percent svg circle{
+#Sec3_about.pc .card:nth-child(6) .percent svg circle{
   stroke-dashoffset: calc(440 - (440*90) / 100);
 }
 
@@ -347,13 +352,13 @@
   align-items: center;
   flex-direction: column;
 }
-.percent .data .number{
+#Sec3_about.pc .percent .data .number{
   font-size: 24px; color: #777;
 }
-.percent .data .number span{
+#Sec3_about.pc .percent .data .number span{
   font-size: 14px;
 }
-.percent .data .text{
+#Sec3_about.pc .percent .data .text{
   font-size: 16px; color: #777;
 }
 
@@ -361,16 +366,17 @@
   display: flex;
   width: 100%;
   padding: 40px 0;
+  transform: translateY(0);
 }
 
-.stickbar-wrap .stickBar{
+#Sec3_about.pc .stickbar-wrap .stickBar{
   flex-basis: calc((100% - 24px)/2);
 }
-.stickbar-wrap .stickBar:nth-child(1){
+#Sec3_about.pc .stickbar-wrap .stickBar:nth-child(1){
   margin-right:24px;
 }
 
-.stickbar-wrap .stickBar li{
+#Sec3_about.pc .stickbar-wrap .stickBar li{
   position: relative;
   width: 100%;
   display: flex;

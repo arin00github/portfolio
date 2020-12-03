@@ -49,16 +49,15 @@ function Header(){
         <header id="header" className="pc">
             <div className="header-wrap">
                 <div className="header-inner">
-                    <h1 className="logo"><Link to="/">Portfolio</Link></h1>
+                    {/* <h1 className="logo"><Link to="/">Portfolio</Link></h1> */}
                     <nav><ul className="gnb">
+                        <li className="list"><Link to="/">Home</Link></li>
                         <li className="list"><Link to="/About">About</Link>
                         </li>
                         <li className="list"><Link to="/web">Web</Link></li>
                         <li className="list"><Link to="/package">Package</Link></li>
                         {/* <li className="list"><Link to="/logo">Logo</Link></li> */}
                         <li className="list"><Link to="/css">CSS</Link></li>
-                        <li className="list"><Link to="/Contact">Contact</Link>
-                        </li>
                     </ul></nav>
                 </div>  
             </div>

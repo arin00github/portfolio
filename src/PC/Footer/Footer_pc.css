@@ -1,0 +1,23 @@
+#footer.pc{
+    width: 100%;
+    background: #888;
+}
+
+#footer.pc .footer-inner{
+    width: 90%;
+    margin: 0 auto;
+    padding: 80px 0;
+
+}
+
+#footer.pc .footer-inner .ft-content{
+    display: flex;
+}
+
+#footer.pc .footer-inner .ft-content  p{
+    color: white;
+}
+
+#footer.pc .footer-inner .ft-content  p:nth-child(2){
+    margin-left:  auto;
+}

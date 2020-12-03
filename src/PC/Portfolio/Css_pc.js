@@ -1,8 +1,8 @@
-import './Css_m.css';
-import Css01 from './Css_box/Css_01'
-import Css02 from './Css_box/Css_02'
-import Css03 from './Css_box/Css_03'
-
+import './Css_pc.css';
+import Css01 from './Css_box/Css_01';
+import Css02 from './Css_box/Css_02';
+import Css03 from './Css_box/Css_03';
+import Footer from '../Footer/Footer_pc';
 
 
 function Logo(){
@@ -17,25 +17,25 @@ function Logo(){
                     
                     <div className="sect-content">
                     <div className="card">
-                        <div className="card-desc">
+                        {/* <div className="card-desc">
                             <h4>falling Star</h4>
-                        </div>
+                        </div> */}
                         <div className="card-source">
                             <Css02/>
                         </div>
                     </div>
                     <div className="card">
-                        <div className="card-desc">
+                        {/* <div className="card-desc">
                             <h4>Clip Circle</h4>
-                        </div>
+                        </div> */}
                         <div className="card-source">
                             <Css01/>
                         </div>
                     </div>
                     <div className="card">
-                        <div className="card-desc">
+                        {/* <div className="card-desc">
                             <h4>Tilting Circle</h4>
-                        </div>
+                        </div> */}
                         <div className="card-source">
                             <Css03/>
                         </div>
@@ -45,6 +45,7 @@ function Logo(){
                 
                 
             </section>
+            <Footer/>
         </div>
     )
 }

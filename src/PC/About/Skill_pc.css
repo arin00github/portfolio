@@ -1,0 +1,191 @@
+
+.pc .sect-inner .tab-container .sect-content{
+  overflow: hidden;
+}
+
+.pc .sect-inner .tab-container .sect-content:nth-child(1){padding-top: 90px;}
+.pc .sect-inner .tab-container .sect-content:nth-child(2){margin-bottom: 90px ;}
+.pc .sect-content .card{
+    position: relative;
+    display: flex;
+    justify-content: center; align-items: center;
+    flex-direction: column;
+    flex-basis: 25%; height: 300px; text-align: center;
+  }
+
+.pc .skill-desc {
+  text-align: center;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.pc .skill-desc .skill-desc-inner{
+  transform: translateY(120%);
+  transition: 0.5s 0.4s;
+}
+
+
+.pc .active .skill-desc .skill-desc-inner{
+  transform: translateY(0);
+}
+
+.pc .skill-desc h3{
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #888;
+}
+.pc .sect-inner .tab-container .sect-content .card-wrap{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  /* transform: translateY(120%);
+  transition: 0.6s 0.6s; */
+}
+.pc .active .sect-inner .tab-container .sect-content .card-wrap{
+  /* transform: translateY(0); */
+}
+
+.pc .sect-content .card .percent{
+    position: relative;
+    width: 150px; height: 150px;
+    border-radius: 50%;
+    z-index: 10;
+  }
+.pc .sect-content .card .card-list{
+    margin-top: 18px;
+    height: 120px; padding: 0 12px;
+  }
+  
+.pc .sect-content .card .card-list ul li{
+    font-size: 12px; word-break: keep-all;
+ }
+  
+.pc .percent svg{
+    position: relative; width: 150px; 
+    height: 150px; z-index: 100;
+ }
+  
+.pc .percent svg circle{
+    width: 100%; height: 100%; fill: none;
+    stroke: #ececec;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    transition: 0.5s 0.3s;
+    
+  }
+  
+.active .card:nth-child(1) .percent svg circle{
+    stroke-dashoffset: calc(440 - (440*90) / 100);
+  }
+.active .card:nth-child(2) .percent svg circle{
+    stroke-dashoffset: calc(440 - (440*96) / 100);
+  }
+.active .card:nth-child(3) .percent svg circle{
+    stroke-dashoffset: calc(440 - (440*70) / 100);
+  }
+.active .card:nth-child(4) .percent svg circle{
+    stroke-dashoffset: calc(440 - (440*70) / 100);
+  }
+
+  
+.pc .percent .data{
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    display: flex; justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+.percent .data .number{
+    font-size: 24px; color: #777;
+  }
+.percent .data .number span{
+    font-size: 14px;
+  }
+.percent .data .text{
+    font-size: 16px; color: #777;
+  }
+  
+.pc .stickbar-wrap{
+    display: flex;
+    width: 100%;
+    padding: 40px 0;
+    
+  }
+  
+.stickbar-wrap .stickBar{
+    flex-basis: calc((100% - 24px)/2);
+  }
+.stickbar-wrap .stickBar:nth-child(1){
+    margin-right:24px;
+  }
+  
+.stickbar-wrap .stickBar li{
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin-bottom: 18px;
+  }
+.stickbar-wrap .stickBar li h4{
+    flex-basis: 30%;
+    color: #777;
+    padding-right: 20px;
+    text-align: right;
+  }
+.stickbar-wrap .stickBar .bar {
+    flex-basis: calc(70% - 20px);
+    background: #eeeeee;
+    display: block;
+    height: 10px;
+    width: calc(70% - 20px);
+    border-radius: 5px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+  
+.stickbar-wrap .stickBar .bar .per{
+    position: absolute;
+    top: 0; left: 0;
+    background: #888;
+    border-radius: 5px;
+    height: 10px;
+    transform: scaleX(0);
+    transition: 0.5s 0.3s;
+    transform-origin: left;
+}
+.active .stickbar-wrap .stickBar .bar .per{
+  transform: scaleX(1);
+}
+
+
+.pc .bar01{
+    width: 90%;
+  }
+  
+.stickBar>.bar>.bar02{
+    width: 94%;
+  }
+  
+.stickBar>.bar>.bar03{
+    width: 87%;
+  }
+  
+.pc .skill-link{
+    display: flex;
+    justify-content: center;
+  }
+.pc .skill-link button{
+    display: block;
+    padding: 8px 24px;
+    border: 1px solid #ddd;
+  }
+.pc .skill-link button:nth-of-type(1){
+    margin-right: 24px;
+  }

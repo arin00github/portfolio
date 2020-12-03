@@ -74,6 +74,22 @@
     transition: 0.7s;
 }
 
+#Sec0_package.package .sect-content .work-text h4{
+    margin-bottom: 12px;
+    padding-left: 40px;
+    font-size: 28px;
+    position: relative;
+}
+
+
+#Sec0_package.package .sect-content .work-text h4::before{
+    content: attr(number);
+    font-size: 40px;
+    position: absolute;
+    left: 0;
+    top: 50%; transform: translateY(-50%);
+}
+
 #Sec0_package.package .sect-content.active .work-text{
     transform: translateX(0);
 }

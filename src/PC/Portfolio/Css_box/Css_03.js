@@ -1,6 +1,6 @@
 import './Css_03.css'
 
-function Css_01 (){
+function Css_03 (){
     return(
         <div className="cssbox" id="box3">
             <div className="square">
@@ -13,4 +13,4 @@ function Css_01 (){
     )
 }
 
-export default Css_01;
+export default Css_03;

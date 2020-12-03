@@ -2,6 +2,7 @@ import { Route, Switch } from 'react-router-dom';
 import { Suspense, useEffect } from 'react';
 import { lazy } from 'react';
 import Header from './Header/Header_pc';
+import Footer from './Footer/Footer_pc';
 //import Main from './Main/Main_pc';
 //import About from './About/About_pc';
 //import Web from './Portfolio/Web_pc';
@@ -15,7 +16,7 @@ let Main = lazy(()=>{return import('./Main/Main_pc')});
 let About = lazy(()=>{return import('./About/About_pc')});
 let Web = lazy(()=>{return import('./Portfolio/Web_pc')});
 let Package = lazy(()=>{return import('./Portfolio/Package_pc')});
-let Logo = lazy(()=>{return import('./Portfolio/Logo_pc')});
+//let Logo = lazy(()=>{return import('./Portfolio/Logo_pc')});
 let CSSEffect = lazy(()=>{return import('./Portfolio/Css_pc')});
 let Contact = lazy(()=>{return import('./Contact/Contact_pc')});
 
@@ -110,8 +111,9 @@ function PCIndex (){
                     <Route path="/Contact" component={Contact}></Route>
                 </Switch>
             </Suspense>
-            
+            {/* <Footer/> */}
         </div>
+        
         </>
     )
 }
