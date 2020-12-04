@@ -25,7 +25,15 @@ function Main (){
             
                 <section id="Sec0_main" className="mobile">
                     <div className="sect-inner">
+                        
                         <HomeSlider></HomeSlider>
+                        <div className="circle-wrap">
+                            <div className="circle">
+                                <img src="" alt=""/>
+                            </div>
+                            {/* <div className="name">Lee Hyo Jeong</div> */}
+                            
+                        </div>
                     </div>
                 </section>
                 {/* <section id="Sec1_main" className="mobile">

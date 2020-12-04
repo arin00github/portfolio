@@ -39,7 +39,20 @@
     padding-bottom: 0;
 }
 
-
+#Sec0_main .sect-inner .circle-wrap{
+    position: absolute;
+    top: 20%; left: 50%; transform: translateX(-50%);
+    width: 200px; height: 270px;
+}
+#Sec0_main .sect-inner .circle-wrap .circle{
+    width: 200px; height: 200px; border-radius: 50%;
+    background: #ddd;
+    
+}
+#Sec0_main .sect-inner .circle-wrap .name{
+    color: #acacac;
+    text-align: center;
+}
 
 #Sec0_main .sect-inner .home-slider{
     width: 100%;
@@ -64,7 +77,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 50%;
+    bottom: 30%;
 
 }
 #Sec0_main .slick-slide .main-item .main-text .type{

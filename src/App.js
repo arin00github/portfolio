@@ -20,13 +20,13 @@ function App() {
   
   return (
     <div className="App" id="App">
-      <BrowserView>
+      {/* <BrowserView>
         <PC/>
       </BrowserView>
       <MobileView>
         <Mobile></Mobile>
-      </MobileView>
-     {/* <Mobile></Mobile> */}
+      </MobileView> */}
+     <Mobile></Mobile>
       
       
     </div>

@@ -47,8 +47,8 @@ function Skill (){
             </div>
             <div className="skill-desc">
                 <div className="skill-desc-inner">
-                    <h3>Coding Skill</h3>
-                    <p>웹퍼블리셔역할의 인터페이스 디자인부터 프레임워크를 이용한 데이터바인딩 및 관리를 할 수 있습니다</p>
+                    <h3>Design Skill</h3>
+                    <p>시각디자인분야을 툴을 전반적으로 사용할 수 있습니다. 로고,패키지, 웹디자인 등의 시각분야의 디자인 작업이 가능합니다.</p>
                 </div>
             </div>
             <div className="sect-content">
