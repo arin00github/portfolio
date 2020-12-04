@@ -1,0 +1,23 @@
+#footer{
+    width: 100%;
+    background: #888;
+}
+
+#footer .footer-inner{
+    width: 90%;
+    margin: 0 auto;
+    padding: 60px 0;
+
+}
+#footer .footer-inner .ft-content{
+    display: block;
+    text-align: center;
+}
+
+#footer .footer-inner .ft-content  p{
+    color: white;
+}
+
+#footer .footer-inner .ft-content  p:nth-child(2){
+    margin-left:  auto;
+}

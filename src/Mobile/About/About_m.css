@@ -3,6 +3,7 @@
     position: absolute;
     top: 110px;
     width: 100%;
+    max-width: 1024px;
 }
    
 
@@ -15,10 +16,11 @@
 
 #Sec1_about .sect-inner .sect-title{
   text-align: center;
-  font-size: 40px;
-  font-weight: bold;
-  padding-top: 60px;
+  font-size: 56px;
+  padding-top: 80px;
   margin-bottom: 40px;
+  font-family: 'Bebas Neue', cursive;
+  color: #acacac;
 }
 
 #Sec1_about .sect-inner .sect-content {
@@ -27,6 +29,7 @@
 
 #Sec1_about .sect-inner .cont-left {
   width: 55%;
+  padding-bottom: 24px;
 }
 #Sec1_about .sect-inner .text01{
   padding: 18px 0;
@@ -71,10 +74,13 @@
 }
 
 #Sec2_about .sect-inner .tab-title{
-  display: flex;
   padding: 10px 12px;
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd;
+}
+
+#Sec2_about .sect-inner .tab-title a{
+  display: flex;
 }
 
 #Sec2_about .sect-inner .tab-title h2{
@@ -183,11 +189,16 @@
     padding-top: 20px;
 }
 
+
+
 #Sec3_about .sect-inner .tab-title{
-  display: flex;
   padding: 10px 12px;
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd;
+}
+
+#Sec3_about .sect-inner .tab-title a{
+  display: flex;
 }
 
 #Sec3_about .sect-inner .tab-title h2{
@@ -241,10 +252,10 @@
 
 @keyframes slidedown2{
   0%{height: 0;}
-  100%{height: 600px;}
+  100%{height: 900px;}
 }
 @keyframes slideup2{
-  0%{height: 600px;}
+  0%{height: 900px;}
   100%{height: 0;}
 }
 
@@ -255,6 +266,26 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
+#Sec3_about .skill-desc {
+  text-align: center;
+  margin-bottom: 24px;
+  overflow: hidden;
+  padding-top: 40px;
+}
+
+/* #Sec3_about .skill-desc:nth-child(1){
+  padding-top: 60px;
+}
+#Sec3_about .skill-desc:nth-child(2){
+  padding-bottom: 60px;
+} */
+#Sec3_about .skill-desc h3{
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #888;
+}
+
 #Sec3_about .sect-content .card{
   position: relative;
   display: flex; flex-direction: column;
@@ -398,15 +429,18 @@
   width: 80%;
   position: relative;
   margin: 0 auto;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 #Sec4_about .sect-inner .tab-title{
-  display: flex;
   padding: 10px 12px;
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd;
 }
+#Sec4_about .sect-inner .tab-title a{
+  display: flex;
+}
+
 
 #Sec4_about .sect-inner .tab-title h2{
   color: #888;
@@ -442,10 +476,10 @@
 
 @keyframes slidedown3{
   0%{height: 0;}
-  100%{height: 300px;}
+  100%{height: 450px;}
 }
 @keyframes slideup3{
-  0%{height: 300px;}
+  0%{height: 450px;}
   100%{height: 0;}
 }
 
@@ -501,6 +535,29 @@
 }
 
 
+#Sec4_about .sect-inner .sect-content{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+#Sec4_about .sect-inner .sect-content .personal{
+  margin-bottom: 24px;
+  display: flex
+}
+#Sec4_about .sect-inner .sect-content .personal h4{
+  flex-basis: 20%;
+}
+
+#Sec4_about .sect-inner .sect-content .personal p{
+  flex-basis: 80%;
+  line-height: 2;
+  font-size: 15px;
+}
+
+
 /********  반응형  **********/
 
 
@@ -522,7 +579,49 @@
     width: 270px; height: 270px;
   }
   #Sec3_about .sect-inner .sect-content{justify-content: space-around;}
+
+  #Sec4_about .sect-inner .tab-container.open{
+    animation: slidedown_m768 1s 1 ease-in-out forwards;
+    overflow: hidden;
+  }
+  
+  #Sec4_about .sect-inner .tab-container.close{
+    animation: slideup_m768 1s 1 ease-in-out forwards;
+  }
+  
+  @keyframes slidedown_m768{
+    0%{height: 0;}
+    100%{height: 600px;}
+  }
+  @keyframes slideup_m768{
+    0%{height: 600px;}
+    100%{height: 0;}
+  }
+  
 }
+
+
+@media screen and (max-width:714px){
+  #Sec3_about .sect-inner .tab-container.open{
+    animation: slidedown_m714 1s 1 ease-in-out forwards;
+    overflow: hidden;
+  }
+  
+  #Sec3_about .sect-inner .tab-container.close{
+    animation: slideup_m714 1s 1 ease-in-out forwards;
+  }
+  
+  @keyframes slidedown_m714{
+    0%{height: 0;}
+    100%{height: 1200px;}
+  }
+  @keyframes slideup_m714{
+    0%{height: 1200px;}
+    100%{height: 0;}
+  }
+}
+
+
 @media screen and (max-width:660px){
   #Sec2_about .sect-inner{width: 94%;}
   #Sec3_about .sect-inner{width: 94%;}
@@ -538,9 +637,17 @@
   .stickbar-wrap .stickBar{flex-basis: 48%;}
   #Sec2_about .sect-inner .sect-content{display: block;}
   #Sec2_about .sect-inner .sect-content .sect-text{display: none;}
-  #Sec2_about .sect-inner .my-list{margin-left: 0; flex-basis: 100%;}
+  #Sec2_about .sect-inner .my-list{margin-left: 10%; flex-basis: 90%;}
   #Sec3_about .sect-content .card .card-list{min-width: 140px;}
-  
+  .stickbar-wrap .stickBar li{display: block;}
+  .stickbar-wrap .stickBar li h4{padding-bottom: 14px;}
+  .stickbar-wrap .stickBar .bar{width: 100%; position: relative;
+  }
+
+  #Sec4_about .sect-inner .sect-content .personal p{
+
+    font-size: 14px;
+  }
 }
 
 
@@ -556,5 +663,32 @@
   @keyframes slideup2{
     0%{height: 1000px;}
     100%{height: 0;}
+    
   }
+  #Sec4_about .sect-inner .sect-content .personal p{
+    line-height: 1.7;
+    font-size: 14px;
+  }
+
+  #Sec4_about .sect-inner .tab-container.open{
+    animation: slidedown3_m480 1s 1 ease-in-out forwards;
+    overflow: hidden;
+  }
+  
+  #Sec4_about .sect-inner .tab-container.close{
+    animation: slideup3_m480 1s 1 ease-in-out forwards;
+  }
+  
+  @keyframes slidedown3_m480{
+    0%{height: 0;}
+    100%{height: 800px;}
+  }
+  @keyframes slideup3_m480{
+    0%{height: 800px;}
+    100%{height: 0;}
+  }
+  #Sec4_about .sect-inner .sect-content .personal{display: block;}
+  #Sec4_about .sect-inner .sect-content .personal h4{text-align: center;}
+  
+
 }

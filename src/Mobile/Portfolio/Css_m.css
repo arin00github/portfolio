@@ -8,6 +8,9 @@
     width: 100%;
     max-width: 1024px;
 }
+#Sec0_css{
+    padding-bottom: 100px;
+}
 
 #Sec0_css .sect-inner {
     width: 80%;
@@ -17,11 +20,12 @@
 
 #Sec0_css .sect-inner .sect-title{
     text-align: center;
-    font-size: 40px;
+    font-size: 52px;
     font-weight: bold;
     padding-bottom: 60px;
-    padding-top: 20px;
-    color: #6D6D6D;
+    padding-top: 80px;
+    color: #acacac;
+    font-family: 'Bebas Neue', cursive;
 }
 #Sec0_css .sect-inner .sect-content{
     width: 100%;
@@ -34,7 +38,7 @@
 }
 
 #Sec0_css .sect-inner .sect-content .card .card-desc{
-    flex-basis: 40%;
+    flex-basis: 40%; text-align: center;
 }
 #Sec0_css .sect-inner .sect-content .card .card-source{
     flex-basis: 56%;

@@ -3,7 +3,7 @@ import './Css_m.css';
 import Css01 from './Css_box/Css_01'
 import Css02 from './Css_box/Css_02'
 import Css03 from './Css_box/Css_03'
-
+import Footer from '../Footer/Footer_m';
 
 function Logo(){
     return(
@@ -41,6 +41,7 @@ function Logo(){
                 
                 
             </section>
+            <Footer></Footer>
         </div>
     )
 }

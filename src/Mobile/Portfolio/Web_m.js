@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import './Web_m.css';
 import webData from './Data/webData'
-
+import Footer from '../Footer/Footer_m';
 
 function Web(){
 
@@ -27,28 +27,34 @@ function Web(){
                     webData.map((item, index)=>{
                         return(
                             <div className="sect-content project01" id="project" key={index}>
+                                
+                                <div className="screen-wrap">
+                                    <div className="screen pc">
+                                        <img src={item.screen[2]} alt=""/>
+                                    </div>
+                                    <div className="screen tablet">
+                                        <img src={item.screen[1]} alt=""/>
+                                    </div>
+                                    <div className="screen mobile">
+                                        <img src={item.screen[0]} alt=""/>
+                                    </div>
+                                </div>
                                 <div className="work-text">
                                     <h4>{item.title}</h4>
                                     <p className="desc">
                                     {item.desc}
                                     </p>
                                     <ul className="list">
-                                        <li>4 unique portfolio layouts</li>
-                                        <li>Testimonials slider</li>
-                                        <li>Original about page layout</li>
-                                        <li>Interactive Buttons</li>
+                                        {item.list.map(function(a,i){
+                                                return(
+                                                <li>{a}</li>
+                                                )
+                                            })}
                                     </ul>
-                                </div>
-                                <div className="screen-wrap">
-                                    <div className="screen pc">
-                                        <img src={process.env.PUBLIC_URL +"/img/main/mock6_1.png"} alt=""/>
-                                    </div>
-                                    <div className="screen tablet">
-                                        <img src={process.env.PUBLIC_URL +"/img/main/mock6_2.png"} alt=""/>
-                                    </div>
-                                    <div className="screen mobile">
-                                        <img src={process.env.PUBLIC_URL +"/img/main/mock6_3.png"} alt=""/>
-                                    </div>
+                                    <div className="link-wrap">
+                                            <button><a href={item.weburl} alt="" target="_blank">site 방문하기</a></button>
+                                            <button><a href={item.giturl} alt="" target="_blank">github에서 코딩확인</a></button>
+                                        </div>
                                 </div>
                             </div>
                         )
@@ -56,8 +62,9 @@ function Web(){
                 }
 
                 </div>
-                        
+                         
             </section>
+            <Footer></Footer> 
         </div>
     ) 
 }

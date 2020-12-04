@@ -16,7 +16,7 @@ function Header(){
         const openBtn = document.getElementById('openbtn')
         const closeBtn = document.getElementById('closebtn')
         const modal = document.getElementById('modal-w')
-        const $list = document.getElementsByClassName('list-m');
+        const $list = document.querySelectorAll('.list-m');
 
         
 
@@ -49,7 +49,7 @@ function Header(){
         <header id="header" className="mobile">
             <div className="header-wrap">
                 <div className="header-inner">
-                    <h1 className="logo"><Link to="/">Portfolio</Link></h1>
+                    {/* <h1 className="logo"><Link to="/">Portfolio</Link></h1> */}
                     <button className="btn-header" id="openbtn">
                         <span className="line"></span>
                         <span className="line"></span>
@@ -61,11 +61,11 @@ function Header(){
         <div id="modal-w">
             <div className="modal-inner">
                 <ul className="menu">
+                    <li ><Link to="/" className="list-m">Home</Link></li>
                     <li ><Link to="/About" className="list-m">About</Link></li>
                     <li ><Link to="/web" className="list-m">Web</Link></li>
                     <li ><Link to="/package" className="list-m">Package</Link></li>
                     <li ><Link to="/css" className="list-m">CSS</Link></li>
-                    <li ><Link to="/Contact" className="list-m">Contact</Link></li>
                 </ul>
             </div>
             <button className="btn-header" id="closebtn">
